@@ -1,0 +1,39 @@
+---
+import Social from './Social.astro';
+const dateRange = '2023–2024';
+---
+
+<footer>
+  <div class="footer__container">
+
+    <div class="footer__copy-info">
+
+      <span class="footer__daterange">
+        <!-- &copy; {getDateRange(2022)} -->
+        &copy; {dateRange}
+      </span>
+
+      <span>
+        <a 
+          href="https://aprilcopley.netlify.app"
+          target='_blank' 
+          rel='noopener noreferrer'
+          class="footer__link clickable">
+            April Copley
+        </a>
+      </span>
+
+    </div>
+
+    <div class="footer__links">
+      <Social platform="twitter" url="https://twitter.com/aprilcopley_dev"/>
+      <Social platform="github" url="https://github.com/acopperlily" />
+      <Social platform="linkedin" url="https://www.linkedin.com/in/april-copley/" />
+      <!-- {socialInfo.map((social, i) => (
+        <SocialLink key={i} link={social.link} icon={<social.icon />}/>
+      ))} -->
+
+    </div>
+
+  </div>
+</footer>
