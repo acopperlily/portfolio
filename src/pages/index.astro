@@ -1,41 +1,28 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>April Copley | Software Engineer</title>
-	</head>
-	<body>
-    <Navigation />
-    <section id="hero">
-      <h1>Hello, World</h1>
-      <h3>I'm April, a full-stack software engineer</h3>
-    </section>
+<BaseLayout>
+  <section id="hero">
+    <h1>Hello, World</h1>
+    <h3>I'm April, a full-stack software engineer</h3>
+  </section>
 
-    <section id="section" >
-      <h2>About Me</h2>
-      <p>Born and raised on Florida's Space Coast, I was encouraged to reach for the stars. Even though I had obtained a degree in Psychology, I found excitement while working at Kennedy Space Center and Department of Defense sites.</p>
+  <section id="section" >
+    <h2>About Me</h2>
+    <p>Born and raised on Florida's Space Coast, I was encouraged to reach for the stars. Even though I had obtained a degree in Psychology, I found excitement while working at Kennedy Space Center and Department of Defense sites.</p>
 
-      <p>As a native Floridian, I was considerably affected by the retirement of the Space Shuttle program several years ago. However, I went on to embrace employment opportunities elsewhere, ultimately deciding to launch a new career as a software engineer.</p>
-    </section>
+    <p>As a native Floridian, I was considerably affected by the retirement of the Space Shuttle program several years ago. However, I went on to embrace employment opportunities elsewhere, ultimately deciding to launch a new career as a software engineer.</p>
+  </section>
 
-    <section id="projects" >
-      <h2>Projects</h2>
-      <h3>The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</h3>
-    </section>
+  <section id="projects" >
+    <h2>Projects</h2>
+    <h3>The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</h3>
+  </section>
 
-    <section id="contact" >
-      <h2>Get in Touch</h2>
-      <h3>Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.</h3>
-      <h3>Please feel free to contact me directly at april.copley@protonmail.com or submit the form below.</h3>
-    </section>
-
-    <Footer />
-	</body>
-</html>
+  <section id="contact" >
+    <h2>Get in Touch</h2>
+    <h3>Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.</h3>
+    <h3>Please feel free to contact me directly at april.copley@protonmail.com or submit the form below.</h3>
+  </section>
+</BaseLayout>
