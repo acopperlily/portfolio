@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+
+import dcImage from '../assets/digital-canvas.png';
+import hhcImage from '../assets/happy-hour-cocktails.png';
+import codImage from '../assets/cats-on-demand.png';
+
+import Project from './Project.astro';
+import projects from '../scripts/projects.js';
+
+const images = [
+  dcImage,
+  hhcImage,
+  codImage
+];
+---
+
+<section id="projects" >
+  <h2>Projects</h2>
+  <h3>The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</h3>
+
+  <div class="project-container">
+    {projects.map((project, i) => (
+      <Image src={images[i]} alt={project.name} />
+      <Project 
+        name={project.name} 
+        description={project.description}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  img {
+    width: 200px;
+    height: auto;
+  }
+</style>
