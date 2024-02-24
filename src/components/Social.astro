@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 const { platform, url } = Astro.props;
 ---
 
@@ -8,5 +9,11 @@ const { platform, url } = Astro.props;
   rel="noopener noreferrer"
   class="footer__link clickable"
 >
-  {platform}
+  <Icon name={platform} />
 </a>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
