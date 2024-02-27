@@ -1,5 +1,81 @@
+:root {
+  --heading-bb: 2px solid rgba(96, 96, 97, 0.8);
+
+  /* Font variables */
+  --bold-ss-ff: 'Raleway', sans-serif;
+  --light-ss-ff: 'Source Sans 3', sans-serif;
+  --ls: 0.2ch;
+}
+
+body {
+  font-family: var(--light-ss-ff);
+  background-image: url('../assets/bg-img.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  font-family: var(--bold-ss-ff);
+  text-transform: uppercase;
+  letter-spacing: var(--ls);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  opacity: 0.7;
+}
+
+/* Header */
+header {
+  /* Keep header on top even when scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: rgb(8, 8, 88);
+  opacity: 0.8;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__container > * {
+  border: 1px dotted red;
+}
+
+.header__logo__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__icon {
+}
+
+.header__title {
+  font-weight: 700;
+}
+
 /* Menu */
-.hamburger {
+/* .hamburger {
   padding-right: 20px;
   cursor: pointer;
 }
@@ -46,5 +122,82 @@
 
   .hamburger {
     display: none;
+  }
+} */
+
+/* Hero */
+
+/* .hero {
+  margin-top: 4rem;
+} */
+
+.hero__container {
+  padding-top: 5rem;
+  padding-bottom: 15rem;
+}
+
+.hero__logo__container {
+  border: 2px solid gray;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__logo {
+  width: 2.8rem;
+  height: 2.8rem;
+
+}
+
+.hero__title {
+  padding-bottom: 1rem;
+  font-size: 4rem;
+  /* border-bottom: 2px solid gray; */
+  border-bottom: var(--heading-bb);
+}
+
+.hero__subtitle {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+
+
+/* About */
+
+.about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgb(156, 156, 225);
+}
+
+.about__image__container {
+  max-width: 20em;
+}
+
+.about__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.about__title {
+  border-bottom: var(--heading-bb);
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .about__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;    
+    gap: 3rem;
+  }
+
+  .about__text__container {
+    text-align: right;
   }
 }

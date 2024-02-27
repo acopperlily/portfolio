@@ -3,16 +3,17 @@ import { Icon } from 'astro-icon/components';
 import Navigation from './Navigation.astro';
 ---
 
-<header>
-  <h1 class="header__title">April Copley</h1>
-  <nav class="header__nav">
-    <Icon name="hamburger" class="hamburger" />
-    <Navigation />
-  </nav>
-</header>
+<header class="header">
+  <div class="header__container container">
 
-<style>
-  header {
-    background-color: rgb(12, 12, 88);
-  }
-</style>
+    <div class="header__logo__container clickable" >
+      <Icon class="header__logo" name="rocket" />
+      <h1 class="header__title">April Copley</h1>
+    </div>
+
+    <nav class="header__nav">
+      <Icon id="menu" name="hamburger" class="clickable" />
+      <Navigation />
+    </nav>
+  </div>
+</header>

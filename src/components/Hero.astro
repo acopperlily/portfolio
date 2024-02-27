@@ -1,21 +1,13 @@
 ---
 import { Icon } from 'astro-icon/components';
 ---
-<section id="hero">
-  <Icon name="rocket" />
-  <h1>Hello, World</h1>
-  <h3>I'm April, a full-stack software engineer</h3>
+<section id="hero" class="hero">
+  <div class="hero__container container">
+    <div class="hero__logo__container">
+      <Icon name="rocket" class="hero__logo" />
+    </div>
+    <h1 class="hero__title">Hello, World</h1>
+    <h3 class="hero__subtitle">I'm April, a full-stack software engineer</h3>
+  </div>
 </section>
 
-<style>
-  section {
-    height: 500px;
-    background-image: url('../assets/bg-img.jpg');
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: color-dodge;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-</style>
