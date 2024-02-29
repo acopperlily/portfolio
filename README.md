@@ -46,4 +46,23 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
+![astro](./src/icons/astro.svg)
+![bootstrap](./src/icons/bootstrap.svg)
+![c](./src/icons/cprog.svg)
+![cra](./src/icons/cra.svg)
+![css](./src/icons/css.svg)
+![express](./src/icons/express.svg)
+![git](./src/icons/git.svg)
+![html](./src/icons/html.svg)
+![javascript](./src/icons/javascript.svg)
+![markdown](./src/icons/markdown.svg)
+![mongodb](./src/icons/mongo.svg)
+![mongoose](./src/icons/mongoose.svg)
 ![node](./src/icons/node.svg)
+![postgres](./src/icons/postgres.svg)
+![python](./src/icons/python.svg)
+![react](./src/icons/react.svg)
+![supabase](./src/icons/supabase.svg)
+![tailwind](./src/icons/tailwind.svg)
+![typescript](./src/icons/typescript.svg)
+![vite](./src/icons/vite.svg)
