@@ -1,22 +1,91 @@
 ---
+import Social from './Social.astro';
+import { Image } from 'astro:assets';
+import headshot from '../assets/headshot.jpeg';
 ---
 
 <section id="contact" class="contact">
   <div class="contact__container container">
-    <h2 class="contact__title">Get in Touch</h2>
-    <div class="contact__text__container">
-      <!-- <h2 class="contact__title">Get in Touch</h2> -->
-      <p class="contact__text">Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.</p>
-      <p class="contact__text">Please feel free to contact me directly at april.copley@protonmail.com or submit the form below.</p>
+    <div class="contact__image-text__container">
+      <div class="contact__image__container">
+        <Image
+          src={headshot}
+          alt="Me"
+          class="contact__image"
+        />
+      </div>
+      
+      <div class="contact__text__container">
+        <h2 class="contact__title">Get in Touch</h2>
+        <p class="contact__text">Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.</p>
+        <p class="contact__text">Please feel free to contact me directly at april.copley@protonmail.com or submit the form below.</p>
+      </div>
     </div>
-    <form class="contact__form" action="">
-      <label class="contact__form__label" for="name">Name</label>
-      <input type="text" name="name" id="name">
-      <label class="contact__form__label" for="email">Email</label>
-      <input type="email" name="email" id="email">
-      <label class="contact__form__label" for="message">Message</label>
-      <textarea name="message" id="message" cols="30" rows="5"></textarea>
-      <button class="contact__form__btn">Send Message</button>
-    </form>
+
+    <div class="contact__form-links__container">
+
+      <div class="contact__social-links">
+        <div class="contact__social-link__container">
+          <Social 
+            className="contact__social-link" 
+            platform="twitter" 
+            url="https://twitter.com/aprilcopley_dev"
+          />
+          <span>
+            <a 
+              href="https://twitter.com/aprilcopley_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @aprilcopley_dev
+            </a>
+          </span>
+        </div>
+
+        <div class="contact__social-link__container">
+          <Social 
+            className="contact__social-link" 
+            platform="github" 
+            url="https://github.com/acopperlily" 
+          />
+          <span>
+            <a 
+              href="https://github.com/acopperlily"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/acopperlily
+          </a>
+        </span>
+        </div>
+
+        <div class="contact__social-link__container">
+          <Social 
+            className="contact__social-link" 
+            platform="linkedin" 
+            url="https://www.linkedin.com/in/april-copley/" 
+          />
+          <span>
+            <a 
+              href="https://www.linkedin.com/in/april-copley/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/april-copley/
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <form class="contact__form" action="">
+        <label class="contact__form__label" for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label class="contact__form__label" for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <label class="contact__form__label" for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        <button class="contact__form__btn">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>

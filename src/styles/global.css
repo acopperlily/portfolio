@@ -10,7 +10,7 @@
 body {
   font-family: var(--light-ss-ff);
   background-image: url('../assets/bg-img.jpg');
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
@@ -54,8 +54,7 @@ header {
   top: 0;
   z-index: 1000;
 
-  background-color: rgba(8, 8, 88, 0.8);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 
 }
 
@@ -225,6 +224,7 @@ header a {
 
 .project__card {
   background-color: rgba(18, 15, 33, 0.6);
+  backdrop-filter: blur(10px);
   max-width: 20em;
   border-radius: 5px;
 }
@@ -236,9 +236,34 @@ header a {
   padding-bottom: 10rem;
 }
 
+.contact__image-text__container {
+  margin-bottom: 4rem;
+}
+
 .contact__text__container {
   margin-bottom: 4rem;
 }
+
+.contact__image__container {
+  max-width: 20em;
+  margin: 0 auto;
+}
+
+.contact__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contact__social-link__container {
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+
 .contact__form {
   /* max-width: 40rem; */
 
@@ -266,7 +291,7 @@ input, textarea {
   border: none;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
 }
 
 .contact__form__btn {
@@ -284,7 +309,8 @@ input, textarea {
 footer {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  background-color: rgba(4, 4, 60, 0.9);
+  /* background-color: rgba(4, 4, 60, 0.9); */
+  backdrop-filter: blur(20px);
 
   font-family: var(--bold-ss-ff);
   font-size: 0.8rem;
@@ -340,6 +366,34 @@ footer {
 
   .about__text__container {
     text-align: right;
+  }
+
+  /* Contact */
+  .contact__image-text__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .contact__text__container {
+    text-align: right;
+  }
+
+  .contact__form-links__container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact__form {
+    /* flex-grow: 2; */
+  }
+
+  .contact__social-links {
+    /* flex-grow: 1; */
   }
 
 

@@ -62,6 +62,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ![postgres](./src/icons/postgres.svg)
 ![python](./src/icons/python.svg)
 ![react](./src/icons/react.svg)
+![react-router](./src/icons/react-router.svg)
 ![supabase](./src/icons/supabase.svg)
 ![tailwind](./src/icons/tailwind.svg)
 ![typescript](./src/icons/typescript.svg)

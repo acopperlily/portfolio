@@ -1,13 +1,13 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { platform, url } = Astro.props;
+const { platform, url, className } = Astro.props;
 ---
 
 <a 
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="footer__social-link clickable"
+  class=`${className} clickable`
 >
   <Icon name={platform} />
 </a>
