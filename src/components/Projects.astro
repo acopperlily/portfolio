@@ -16,22 +16,25 @@ const images = [
 ];
 ---
 
-<section id="projects" >
-  <h2>Projects</h2>
-  <p>The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</p>
-
-  <div class="project-container">
-    {projects.map((project, i) => (
-      <Image src={images[i]} alt={project.name} />
-      <Project 
-        name={project.name} 
-        description={project.description}
-      />
-      <button>
-        <Icon name="chevron-right" />
-      </button>
-      <span>View Code</span>
-    ))}
+<section id="projects" class="projects" >
+  <div class="projects__container container">
+    <h2>Projects</h2>
+    <p>The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</p>
+    <div class="project__container">
+      {projects.map((project, i) => (
+        <div class="project__card">
+          <Image src={images[i]} alt={project.name} />
+          <Project
+            name={project.name}
+            description={project.description}
+          />
+          <button>
+            <Icon name="chevron-right" />
+          </button>
+          <span>View Code</span>
+        </div>
+      ))}
+    </div>
   </div>
 </section>
 

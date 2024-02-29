@@ -1,46 +1,58 @@
 ---
 import Social from './Social.astro';
-const dateRange = '2023–2024';
+const dateRange = '2022–2024';
 ---
 
 <footer>
   <div class="footer__container">
 
-    <div class="footer__copy-info">
+    <div class="footer__my-info">
+      <div class="footer__copy-info">
+        <span class="footer__daterange">
+          <!-- &copy; {getDateRange(2022)} -->
+          &copy; {dateRange}
+        </span>
+        <span>
+          <a
+            href="/"
+            class="footer__link clickable">
+              April Copley
+          </a>
+        </span>
+      </div>
+      <div class="footer__social-links">
+        <Social platform="twitter" url="https://twitter.com/aprilcopley_dev"/>
+        <Social platform="github" url="https://github.com/acopperlily" />
+        <Social platform="linkedin" url="https://www.linkedin.com/in/april-copley/" />
+        <!-- {socialInfo.map((social, i) => (
+          <SocialLink key={i} link={social.link} icon={<social.icon />}/>
+        ))} -->
+      </div>
+    </div>
 
-      <span class="footer__daterange">
-        <!-- &copy; {getDateRange(2022)} -->
-        &copy; {dateRange}
-      </span>
-
+    <div class="footer__attributions">
       <span>
+        Design inspired by: 
         <a 
-          href="https://aprilcopley.netlify.app"
+          href="https://html5up.net/"
           target='_blank' 
           rel='noopener noreferrer'
           class="footer__link clickable">
-            April Copley
+            HTML5Up
         </a>
       </span>
-
-    </div>
-
-    <div class="footer__links">
-      <Social platform="twitter" url="https://twitter.com/aprilcopley_dev"/>
-      <Social platform="github" url="https://github.com/acopperlily" />
-      <Social platform="linkedin" url="https://www.linkedin.com/in/april-copley/" />
-      <!-- {socialInfo.map((social, i) => (
-        <SocialLink key={i} link={social.link} icon={<social.icon />}/>
-      ))} -->
-
+      <span> | </span>
+      <span>
+        Space photo: 
+        <a 
+          href="https://www.pexels.com/@philippedonn/"
+          target='_blank' 
+          rel='noopener noreferrer'
+          class="footer__link clickable">
+            Philippe Donn
+        </a>
+      </span>
     </div>
 
   </div>
 </footer>
-
-<style>
-  footer {
-    background-color: rgb(4, 4, 43);
-    padding-bottom: 30px;
-  }
-</style>

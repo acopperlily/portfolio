@@ -6,13 +6,13 @@ import Navigation from './Navigation.astro';
 <header class="header">
   <div class="header__container container">
 
-    <div class="header__logo__container clickable" >
+    <div class="header__logo__container" >
       <Icon class="header__logo" name="rocket" />
-      <h1 class="header__title">April Copley</h1>
+      <h1 class="header__title clickable"><a href="/">April Copley</a></h1>
     </div>
 
     <nav class="header__nav">
-      <Icon id="menu" name="hamburger" class="clickable" />
+      <Icon id="menu" name="hamburger" class="header__nav__icon clickable" />
       <Navigation />
     </nav>
   </div>
