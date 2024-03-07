@@ -18,29 +18,39 @@ const images = [
 
 <section id="projects" class="projects" >
   <div class="projects__container container">
-    <h2>Projects</h2>
-    <p>The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</p>
+
+    <div class="projects__text-container">
+      <h2 class="projects__title">Projects</h2>
+      <p class="projects__text">The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</p>
+    </div>
+
     <div class="project__container">
       {projects.map((project, i) => (
         <div class="project__card">
-          <Image src={images[i]} alt={project.name} />
-          <Project
-            name={project.name}
-            description={project.description}
-          />
-          <button>
-            <Icon name="chevron-right" />
-          </button>
-          <span>View Code</span>
+          <div class="project__image-container">
+            <Image 
+              src={images[i]} 
+              alt={project.name}
+              class="project__img"
+            />
+          </div>
+          <div class="project__info-container">
+            <Project
+              name={project.name}
+              description={project.description}
+            />
+            <div class="project__link-container">
+              <a
+                href="#"
+                class="project__link__icon clickable"
+              >
+                <Icon name="chevron-right" />
+                <span>View Code</span>
+              </a>
+            </div>
+          </div>
         </div>
       ))}
     </div>
   </div>
 </section>
-
-<style>
-  img {
-    width: 200px;
-    height: auto;
-  }
-</style>

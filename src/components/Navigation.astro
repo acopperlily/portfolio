@@ -1,10 +1,65 @@
 ---
 ---
 
-<div class="header__nav__links">
-  <a class="header__nav__link clickable" href="/">Home</a>
-  <a class="header__nav__link clickable" href="#about">About</a>
-  <a class="header__nav__link clickable" href="#projects">Projects</a>
-  <a class="header__nav__link clickable" href="#contact">Contact</a>
-</div>
+<ul class="header__menu">
+  <li class="menu__list-item">
+    <a 
+      class="menu__list-link clickable" 
+      href="#hero"
+    >
+      Home
+    </a>
+  </li>
 
+  <li class="menu__list-item">
+    <a 
+      class="menu__list-link clickable" 
+      href="#about"
+    >
+      About
+    </a>
+  </li>
+
+  <li class="menu__list-item">
+    <a 
+      class="menu__list-link clickable" 
+      href="#projects"
+    >
+      Projects
+    </a>
+  </li>
+
+  <li class="menu__list-item">
+    <a 
+      class="menu__list-link clickable" 
+      href="#contact"
+    >
+      Contact
+    </a>
+  </li>
+</ul>
+
+<style>
+  .header__menu {
+    padding: 0 1.4rem;
+  }
+
+  /* Create separators between menu items */
+  .menu__list-item + li {
+    border-top: 1px solid var(--color-med);
+  }
+
+  .menu__list-link {
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  /* Media Queries */ 
+  @media (min-width: 60em) {
+
+    /* Remove separators from menu */
+    .menu__list-item + li {
+      border: none;
+    }
+  }
+</style>

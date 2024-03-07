@@ -4,16 +4,142 @@ import Navigation from './Navigation.astro';
 ---
 
 <header class="header">
-  <div class="header__container container">
+  <div class="header-container container">
 
-    <div class="header__logo__container" >
-      <Icon class="header__logo" name="rocket" />
-      <h1 class="header__title clickable"><a href="/">April Copley</a></h1>
-    </div>
+    <a 
+      href="#hero" 
+      class="header__logo-wrapper clickable"
+      aria-label="Back to home"
+    >
+      <Icon 
+        class="header__logo" 
+        name="rocket" 
+        aria-hidden="true"
+      />
+      <p class="header__title">April Copley</p>
+    </a>
 
-    <nav class="header__nav">
-      <Icon id="menu" name="hamburger" class="header__nav__icon clickable" />
+
+    <button 
+      class="btn btn--hamburger clickable"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navigation"
+    >
+      <Icon 
+        class="header__hamburger" 
+        id="menu" 
+        name="hamburger" 
+        aria-hidden="true"
+      />
+    </button>
+
+    <nav 
+      id="navigation"
+      class="header__nav"
+      aria-hidden="true"
+    >
       <Navigation />
     </nav>
+
   </div>
 </header>
+
+<script src="../scripts/menu.js"></script>
+
+<style>
+
+  header {
+    /* Keep header on top even when scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Create frosted glass effect */
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+
+    font-family: var(--bold-ss-ff);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Logo & Title */
+  .header__logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header__logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .header__title {
+    font-family: var(--bold-ss-ff);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  /* Nav Button */
+  .btn--hamburger {
+    background-color: transparent;
+    color: var(--color-light);
+  }
+
+  .header__hamburger {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* Nav Menu */
+  .header__nav {
+    /* Menu collapsed */
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .is-visible {
+    /* Menu expanded */
+    visibility: visible;
+    opacity: 1;
+
+    /* background-color: var(--color-dark); */
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+  }
+
+
+  /* Media Queries */
+  @media (min-width: 60em) {
+
+    /* Nav Button */
+    .btn--hamburger {
+      display: none;
+    }
+
+    /* Nav Menu */
+    .header__nav {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+</style>
