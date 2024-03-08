@@ -57,9 +57,14 @@
   /* Media Queries */ 
   @media (min-width: 60em) {
 
+    .header__menu {
+      display: flex;
+    }
+
     /* Remove separators from menu */
     .menu__list-item + li {
-      border: none;
+      /* Keeps from displaying on dark mode (???) */
+      border-top: 0 solid transparent;
     }
   }
 </style>

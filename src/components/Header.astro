@@ -8,7 +8,7 @@ import Navigation from './Navigation.astro';
 
     <a 
       href="#hero" 
-      class="header__logo-wrapper clickable"
+      class="header__brand-wrapper clickable"
       aria-label="Back to home"
     >
       <Icon 
@@ -23,7 +23,6 @@ import Navigation from './Navigation.astro';
     <button 
       class="btn btn--hamburger clickable"
       aria-label="Toggle navigation menu"
-      aria-expanded="false"
       aria-controls="navigation"
     >
       <Icon 
@@ -37,7 +36,6 @@ import Navigation from './Navigation.astro';
     <nav 
       id="navigation"
       class="header__nav"
-      aria-hidden="true"
     >
       <Navigation />
     </nav>
@@ -53,15 +51,33 @@ import Navigation from './Navigation.astro';
     /* Keep header on top even when scrolling */
     position: sticky;
     top: 0;
-    z-index: 1000;
 
-    /* Create frosted glass effect */
-    -webkit-backdrop-filter: blur(var(--blur));
-    backdrop-filter: blur(var(--blur));
+    /* For stacking context due to backdrop-filter */
+    z-index: 10;
 
     font-family: var(--bold-ss-ff);
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing);
+  }
+
+  /*  
+    This is a hack to make the frosted glass
+    effect work for Chrome as there is a known
+    issue with using the backdrop-filter property
+    on nested elements
+  */
+  header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* Create frosted glass effect */
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
   }
 
   .header-container {
@@ -71,7 +87,7 @@ import Navigation from './Navigation.astro';
   }
 
   /* Logo & Title */
-  .header__logo-wrapper {
+  .header__brand-wrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -84,7 +100,7 @@ import Navigation from './Navigation.astro';
 
   .header__title {
     font-family: var(--bold-ss-ff);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: var(--letter-spacing);
   }
@@ -102,27 +118,37 @@ import Navigation from './Navigation.astro';
 
   /* Nav Menu */
   .header__nav {
-    /* Menu collapsed */
-    visibility: hidden;
-    opacity: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
 
+    /* Create frosted glass effect */
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+
+    /* Position mobile menu just below header */
     position: absolute;
     top: 100%;
     right: 0;
 
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
+    /* Hide and disable mobile menu */
+    opacity: 0;
+    visibility: hidden;
+
+    /* Creates fade-out effect */
+    transition: opacity 0.5s ease-in, visibility 0s 0.5s;
   }
 
-  .is-visible {
-    /* Menu expanded */
-    visibility: visible;
+  .expanded {
+    /* Mobile menu expanded */
     opacity: 1;
+    visibility: visible;
+    /* z-index: 1000; */
 
-    /* background-color: var(--color-dark); */
-    -webkit-backdrop-filter: blur(var(--blur));
-    backdrop-filter: blur(var(--blur));
+    background-color: var(--color-dark);
+
+    /* Creates fade-in effect */
+    transition: opacity 0.3s ease-in, visibility 0s 0s;
   }
 
 
@@ -131,15 +157,23 @@ import Navigation from './Navigation.astro';
 
     /* Nav Button */
     .btn--hamburger {
+      /* Hide toggle nav on wider screens */
       display: none;
     }
 
     /* Nav Menu */
     .header__nav {
+      /* Display normal menu on wider screens */
       position: relative;
       visibility: visible;
       opacity: 1;
+      transition: none;
+
+      /* Remove frosted glass effect */
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
     }
+
   }
 
 </style>
