@@ -1,13 +1,109 @@
 ---
 import { Icon } from 'astro-icon/components';
+import LinkButton from './LinkButton.astro';
 ---
 <section id="hero" class="hero">
-  <div class="hero__container container">
-    <div class="hero__logo__container">
-      <Icon name="rocket" class="hero__logo" />
+  <div class="hero-container container">
+
+    <div class="hero__logo-container">
+      <Icon 
+        name="rocket" 
+        class="hero__logo" 
+        aria-hidden="true"
+      />
     </div>
+
     <p class="hero__greeting">Hello, World</p>
-    <h1 class="hero__title">I'm <strong>April</strong>, a full-stack <em>software engineer</em></h1>
+
+    <h1 
+      class="hero__title"
+    >
+      I'm <strong>April</strong>, a full-stack <em>software engineer</em>
+    </h1>
+
+    <div class="hero__page-links">
+
+      <LinkButton
+        link="#about"
+        page="About Me section"
+        icon="chevron-right"
+        title="About"
+      />
+
+      <LinkButton
+        link="#projects"
+        page="Projects section"
+        icon="chevron-right"
+        title="Projects"
+      />
+
+      <LinkButton
+        link="#contact"
+        page="Contact section"
+        icon="chevron-right"
+        title="Contact"
+      />
+
+    </div>
+
   </div>
 </section>
 
+<style>
+  .hero {
+    padding-top: 10rem;
+    padding-bottom: 25rem;
+    background-color: transparent;
+  }
+
+  .hero__logo-container {
+    border: 2px solid var(--bg-color-bright);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__logo {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .hero__greeting {
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    border-bottom: var(--heading-bb-light);
+    font-family: var(--bold-ss-ff);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  .hero__title strong {
+    font-weight: 900;
+  }
+
+  .hero__title em {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .hero__page-links {
+    margin-top: 4em;
+  }
+
+  @media (min-width: 50em) {
+    .hero__page-links {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+</style>

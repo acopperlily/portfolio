@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+const { link, page, icon, title } = Astro.props;
+---
+
+<div class="link-container">
+  <a 
+    href={link}
+    aria-label={`Navigate to ${page}`}
+    class="link__wrapper clickable"
+  >
+    <Icon
+      name={icon} 
+      aria-hidden="true"
+      class="link__icon"
+    />
+    <span class="link__title">{title}</span>
+  </a>
+</div>
+
+<style>
+
+  .link__wrapper {
+    /* border: 1px solid pink; */
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .link__icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .link__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+  }
+</style>
