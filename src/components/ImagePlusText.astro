@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import HeadingPlusText from './HeadingPlusText.astro';
+import LinkButton from './LinkButton.astro';
+import discovery from '../assets/discovery.jpg';
+import headshot from '../assets/headshot.jpeg';
+const { src, alt, title, text, buttons } = Astro.props;
+---
+
+<div class="component__content-wrapper">
+  <div class="component__image-wrapper">
+    <Image
+      src={src === 'discovery' ? discovery : headshot}
+      alt={alt}
+      class="component__image"
+    />
+  </div>
+  <div class="component__text-wrapper">
+    <HeadingPlusText
+      title={title}
+      text={text}
+    />
+
+    {buttons && <div class="buttons-wrapper">
+      {buttons.map(button => <LinkButton link={button.link} page={button.page} icon={button.icon} title={button.title}/>)}
+    </div>}
+  </div>
+</div>
+
+<style>
+
+  .component__image-wrapper {
+    max-width: 20em;
+    margin: 0 auto;
+  }
+
+  .component__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 60em) {
+
+    .component__content-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .component__text-wrapper {
+      text-align: right;
+      max-width: 40em;
+    }
+
+    .buttons-wrapper {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+    }
+  }
+</style>
