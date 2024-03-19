@@ -1,12 +1,13 @@
 ---
-import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
+
+import HeadingPlusText from './HeadingPlusText.astro';
+import LinkButton from './LinkButton.astro';
 
 import dcImage from '../assets/digital-canvas.png';
 import hhcImage from '../assets/happy-hour-cocktails.png';
 import codImage from '../assets/cats-on-demand.png';
 
-import Project from './Project.astro';
 import projects from '../scripts/projects.js';
 
 const images = [
@@ -20,37 +21,92 @@ const images = [
   <div class="projects__container container">
 
     <div class="projects__text-container">
-      <h2 class="projects__title">Projects</h2>
-      <p class="projects__text">The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless.</p>
+
+      <HeadingPlusText
+        headingLevel="h2"
+        title="Projects"
+        text={["The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless."]}
+      />
+
     </div>
 
-    <div class="project__container">
+    <div class="project-cards__container">
       {projects.map((project, i) => (
-        <div class="project__card">
-          <div class="project__image-container">
+        <div class="project-card">
+          <div class="project-card__image-container">
             <Image 
               src={images[i]} 
               alt={project.name}
-              class="project__img"
+              class="project-card__image"
             />
           </div>
-          <div class="project__info-container">
-            <Project
-              name={project.name}
-              description={project.description}
+
+          <div class="project-card__info-container">
+            <HeadingPlusText
+              headingLevel="h3"
+              title={project.name}
+              text={[project.description]}
+              variant="card"
             />
-            <div class="project__link-container">
-              <a
-                href="#"
-                class="project__link__icon clickable"
-              >
-                <Icon name="chevron-right" />
-                <span>View Code</span>
-              </a>
-            </div>
+            <LinkButton
+              link={project.codeLink}
+              page="code repository on GitHub"
+              icon="chevron-right"
+              title="View Code"
+              isExternal={true}
+            />
           </div>
         </div>
       ))}
     </div>
   </div>
 </section>
+
+<style>
+
+  .projects {
+    background-color: var(--bg-color-dark);
+  }
+
+  .project-cards__container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 3rem;
+  }
+
+  .project-card {
+    background-color: var(--color-dark);
+    border-radius: 5px;
+  }
+
+  .project-card__image-container {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .project-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project-card__info-container {
+    /* border: 1px dotted yellow; */
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    justify-content: space-between;
+    /* align-items: stretch; */
+    /* gap: 3rem; */
+    padding: 1rem;
+  }
+
+  .project-card__info-container > * {
+    background-color: aqua;
+    border: 1px dotted greenyellow;
+  }
+</style>

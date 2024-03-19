@@ -1,14 +1,21 @@
 ---
-const { title, text } = Astro.props;
+const { headingLevel, title, text, variant } = Astro.props;
+const HeadingTag = headingLevel;
+
+let titleClass = 'component__title';
+if (variant) titleClass += ` component__title--${variant}`;
+
+let textClass = 'component__text';
+if (variant) textClass += ` component__text--${variant}`;
 ---
 
-<h2 class="component__title">{title}</h2>
-{text.map(para => <p class="component__text">{para}</p>)}
+<HeadingTag class={titleClass}>{title}</HeadingTag>
+{text.map(para => <p class={textClass}>{para}</p>)}
 
 <style>
 
   .component__title {
-    border-bottom: var(--heading-bb-dark);
+    border-bottom: var(--heading-bb-light);
     padding-bottom: 1rem;
   }
 
@@ -16,5 +23,10 @@ const { title, text } = Astro.props;
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.3;
+  }
+
+  .component__text--card {
+    font-size: 1rem;
+    font-weight: 400;
   }
 </style>
