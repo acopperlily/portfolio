@@ -1,5 +1,5 @@
 ---
-import Social from './Social.astro';
+import SocialLink from './SocialLink.astro';
 const dateRange = '2022–2024';
 ---
 
@@ -21,9 +21,9 @@ const dateRange = '2022–2024';
         </span>
       </div>
       <div class="footer__social-links">
-        <Social className="footer__social-link" platform="twitter" url="https://twitter.com/aprilcopley_dev"/>
-        <Social className="footer__social-link" platform="github" url="https://github.com/acopperlily" />
-        <Social className="footer__social-link" platform="linkedin" url="https://www.linkedin.com/in/april-copley/" />
+        <SocialLink className="footer__social-link" platform="twitter" url="https://twitter.com/aprilcopley_dev"/>
+        <SocialLink className="footer__social-link" platform="github" url="https://github.com/acopperlily" />
+        <SocialLink className="footer__social-link" platform="linkedin" url="https://www.linkedin.com/in/april-copley/" />
         <!-- {socialInfo.map((social, i) => (
           <SocialLink key={i} link={social.link} icon={<social.icon />}/>
         ))} -->

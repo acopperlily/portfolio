@@ -1,0 +1,48 @@
+---
+import HeadingPlusText from './HeadingPlusText.astro';
+import { Icon } from 'astro-icon/components';
+const { platform, url, handle, className } = Astro.props;
+---
+
+<a 
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class=`${className} clickable`
+>
+  <Icon class="social-link__icon" name={platform.toLowerCase()} />
+
+  {handle && (
+    <div class="social-link__text-wrapper">
+      <HeadingPlusText
+        headingLevel="h3"
+        title={platform}
+        text={[handle]}
+      />
+    </div>
+  )}
+</a>
+
+<style>
+  .social-link--card {
+    margin-top: 2rem;
+    padding: 0.7rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--blur));
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .social-link--card .social-link__icon {
+    font-size: 2rem;
+  }
+
+  .social-link__platform {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+  }
+</style>

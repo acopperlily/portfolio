@@ -70,13 +70,7 @@ li {
 
 
 /* Projects */
-.project-card__info-container {
-  /* justify-content: space-around; */
-}
-.project-card__info-container > * {
-  /* border: 1px solid red; */
-  /* flex-grow: 1; */
-}
+
 
 /* Contact */
 
@@ -86,46 +80,6 @@ li {
   z-index: -2;
 }
 
-.contact__image-text__container {
-  margin-bottom: 4rem;
-}
-
-.contact__text__container {
-  margin-bottom: 4rem;
-}
-
-.contact__title {
-  border-bottom: var(--heading-bb-light);
-}
-
-.contact__image__container {
-  max-width: 20em;
-  margin: 0 auto;
-}
-
-.contact__image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.contact__social-link__container {
-  padding: 1rem 2rem;
-  margin-bottom: 3rem;
-  border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  /* z-index: -10; */
-}
-
-.contact__social-icon {
-  text-decoration: none;
-}
-
-.contact__social-link {
-  /* text-decoration-style: dotted; */
-  text-decoration: none;
-}
 
 .contact__form {
   /* max-width: 40rem; */
@@ -217,18 +171,9 @@ footer {
 
 
   /* Contact */
-  .contact__image-text__container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 3rem;
-  }
 
-  .contact__text__container {
-    text-align: right;
-  }
 
-  .contact__form-links__container {
+  .contact__form-and-links__container {
     display: flex;
     flex-direction: row-reverse;
     gap: 2rem;

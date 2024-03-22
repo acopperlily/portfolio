@@ -1,92 +1,36 @@
 ---
-import Social from './Social.astro';
-import { Image } from 'astro:assets';
-import headshot from '../assets/headshot.jpeg';
+import socialInfo from '../scripts/socialInfo.js';
+import SocialLink from './SocialLink.astro';
+import ImagePlusText from './ImagePlusText.astro';
+
+const contactText = [
+  "Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.",
+  "Please feel free to contact me directly at april.copley@protonmail.com or submit the form below."
+];
 ---
 
 <section id="contact" class="contact">
   <div class="contact__container container">
-    <div class="contact__image-text__container">
-      <div class="contact__image__container">
-        <Image
-          src={headshot}
-          alt="Me"
-          class="contact__image"
-        />
-      </div>
-      
-      <div class="contact__text__container">
-        <h2 class="contact__title">Get in Touch</h2>
-        <p class="contact__text">Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.</p>
-        <p class="contact__text">Please feel free to contact me directly at april.copley@protonmail.com or submit the form below.</p>
-      </div>
-    </div>
+    <ImagePlusText
+      src="headshot"
+      alt="Me"
+      title="Get in Touch"
+      text={contactText}
+    />
 
-    <div class="contact__form-links__container">
+    <div class="contact__form-and-links__container">
 
-      <div class="contact__social-links">
-        <div class="contact__social-link__container">
-          <div class="contact__social-brand">
-            <Social
-              className="contact__social-icon"
-              platform="twitter"
-              url="https://twitter.com/aprilcopley_dev"
-            />
-            <span>Twitter</span>
-          </div>
-          <span>
-            <a 
-              class="contact__social-link clickable"
-              href="https://twitter.com/aprilcopley_dev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @aprilcopley_dev
-            </a>
-          </span>
-        </div>
+      <div class="social-cards__container">
 
-        <div class="contact__social-link__container">
-          <div class="contact__social-brand">
-            <Social
-              className="contact__social-icon"
-              platform="github"
-              url="https://github.com/acopperlily"
-            />
-            <span>GitHub</span>
-          </div>
-          <span>
-            <a 
-              class="contact__social-link clickable"
-              href="https://github.com/acopperlily"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github.com/acopperlily
-          </a>
-        </span>
-        </div>
+        {socialInfo.map(si => (
+          <SocialLink 
+            platform={si.platform} 
+            url={si.url} 
+            handle={si.handle} 
+            className="social-link--card" 
+          />
+        ))}
 
-        <div class="contact__social-link__container">
-          <div class="contact__social-brand">
-            <Social
-              className="contact__social-icon"
-              platform="linkedin"
-              url="https://www.linkedin.com/in/april-copley/"
-            />
-            <span>LinkedIn</span>
-          </div>
-          <span>
-            <a 
-              class="contact__social-link clickable"
-              href="https://www.linkedin.com/in/april-copley/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              linkedin.com/in/april-copley/
-            </a>
-          </span>
-        </div>
       </div>
 
       <form class="contact__form" action="">
@@ -101,3 +45,14 @@ import headshot from '../assets/headshot.jpeg';
     </div>
   </div>
 </section>
+
+
+<style>
+  .contact__form-and-links__container {
+    margin-top: 5rem;
+  }
+
+  .social-cards__container {
+    
+  }
+</style>
