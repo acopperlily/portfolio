@@ -20,7 +20,7 @@ const contactText = [
 
     <div class="contact__form-and-links__container">
 
-      <div class="social-cards__container">
+      <ul class="social-cards__container" >
 
         {socialInfo.map(si => (
           <SocialLink 
@@ -31,7 +31,7 @@ const contactText = [
           />
         ))}
 
-      </div>
+      </ul>
 
       <form class="contact__form" action="">
         <label class="contact__form__label" for="name">Name</label>
@@ -53,6 +53,6 @@ const contactText = [
   }
 
   .social-cards__container {
-    
+    padding-left: 0;
   }
 </style>
