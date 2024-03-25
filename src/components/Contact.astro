@@ -20,6 +20,26 @@ const contactText = [
 
     <div class="contact__form-and-links__container">
 
+      <form class="form" action="">
+
+        <div class="form__input-wrapper">
+          <label class="form__label" for="name">Name</label>
+          <input class="form__input" type="text" name="name" id="name" placeholder="Ada Lovelace" required >
+        </div>
+
+        <div class="form__input-wrapper">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" name="email" id="email" placeholder="adalovelace@gmail.com" required >
+        </div>
+
+        <div class="form__input-wrapper">
+          <label class="form__label" for="message">Message</label>
+          <textarea class="form__input" name="message" id="message" placeholder="Please enter your message here..." required cols="30" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="form__btn btn clickable">Send Message</button>
+      </form>
+
       <ul class="social-cards__container" >
 
         {socialInfo.map(si => (
@@ -32,16 +52,6 @@ const contactText = [
         ))}
 
       </ul>
-
-      <form class="contact__form" action="">
-        <label class="contact__form__label" for="name">Name</label>
-        <input type="text" name="name" id="name">
-        <label class="contact__form__label" for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label class="contact__form__label" for="message">Message</label>
-        <textarea name="message" id="message" cols="30" rows="5"></textarea>
-        <button class="contact__form__btn">Send Message</button>
-      </form>
     </div>
   </div>
 </section>
@@ -50,9 +60,90 @@ const contactText = [
 <style>
   .contact__form-and-links__container {
     margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
   }
 
   .social-cards__container {
     padding-left: 0;
+    flex: 1;
+  }
+
+  .form {
+    width: 100%;
+    flex: 1.5;
+  }
+
+  .form__input-wrapper {
+    margin-top: 2rem;
+  }
+
+  .form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--bold-ss-ff);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .form__input {
+    padding: 0.7rem;
+    width: 100%;
+    /* margin-bottom: 1.5rem; */
+    background-color: rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 2px solid var(--color-med);
+    border-radius: 5px;
+  }
+
+  .form__input:-moz-placeholder {
+    color: var(--color-light);
+    opacity: 1;
+    font-weight: 300;
+    letter-spacing: .1ch;
+  }
+
+  .form__input::-moz-placeholder {
+    color: var(--color-light);
+    opacity: 1;
+    font-weight: 300;
+    letter-spacing: .1ch;
+  }
+
+  .form__input::-webkit-input-placeholder {
+    color: var(--color-light);
+    font-weight: 300;
+    letter-spacing: .1ch;
+  }
+
+  .form__input::placeholder {
+    color: var(--color-light);
+    font-weight: 300;
+    letter-spacing: .1ch;
+  }
+
+  .form__btn {
+    margin-top: 3rem;
+    background-color: var(--color-light);
+    border-radius: 5px;
+    padding: 1.5rem;
+    width: 20rem;
+
+    font-family: var(--bold-ss-ff);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  @media (min-width: 55em) {
+    .contact__form-and-links__container {
+      flex-direction: row;
+    }
   }
 </style>
