@@ -1,8 +1,8 @@
 const socialInfo = [
   {
     platform: 'Twitter',
-    url: 'https://twitter.com/aprilcopley_dev',
-    handle: '@aprilcopley_dev'
+    url: 'https://twitter.com/acopperlily',
+    handle: '@acopperlily'
   },
   {
     platform: 'GitHub',

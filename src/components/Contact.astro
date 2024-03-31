@@ -20,38 +20,38 @@ const contactText = [
 
     <div class="contact__form-and-links__container">
 
-      <form class="form" action="">
+      <div class="form__wrapper">
+        <h3 class="form__title">Contact</h3>
+        <form class="form" action="">
+          <div class="form__input-wrapper">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__input" type="text" name="name" id="name" placeholder="Ada Lovelace" required >
+          </div>
+          <div class="form__input-wrapper">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" name="email" id="email" placeholder="adalovelace@gmail.com" required >
+          </div>
+          <div class="form__input-wrapper">
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__input" name="message" id="message" placeholder="Please enter your message here..." required cols="30" rows="5"></textarea>
+          </div>
+          <button type="submit" class="form__btn btn clickable">Send Message</button>
+        </form>
+      </div>
 
-        <div class="form__input-wrapper">
-          <label class="form__label" for="name">Name</label>
-          <input class="form__input" type="text" name="name" id="name" placeholder="Ada Lovelace" required >
-        </div>
-
-        <div class="form__input-wrapper">
-          <label class="form__label" for="email">Email</label>
-          <input class="form__input" type="email" name="email" id="email" placeholder="adalovelace@gmail.com" required >
-        </div>
-
-        <div class="form__input-wrapper">
-          <label class="form__label" for="message">Message</label>
-          <textarea class="form__input" name="message" id="message" placeholder="Please enter your message here..." required cols="30" rows="5"></textarea>
-        </div>
-
-        <button type="submit" class="form__btn btn clickable">Send Message</button>
-      </form>
-
-      <ul class="social-cards__container" >
-
-        {socialInfo.map(si => (
-          <SocialLink 
-            platform={si.platform} 
-            url={si.url} 
-            handle={si.handle} 
-            className="social-link--card" 
-          />
-        ))}
-
-      </ul>
+      <div class="social-cards__wrapper">
+        <h3 class="social-cards__title">Connect</h3>
+        <ul class="social-cards__container" >
+          {socialInfo.map(si => (
+            <SocialLink
+              platform={si.platform}
+              url={si.url}
+              handle={si.handle}
+              className="social-link--card"
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -65,14 +65,21 @@ const contactText = [
     gap: 5em;
   }
 
-  .social-cards__container {
+  .social-cards__wrapper {
     padding-left: 0;
     flex: 1;
   }
 
-  .form {
+  .form__wrapper {
     width: 100%;
     flex: 1.5;
+  }
+
+  .form__title,
+  .social-cards__title {
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
+    border-bottom: 2px solid var(--color-med);
   }
 
   .form__input-wrapper {

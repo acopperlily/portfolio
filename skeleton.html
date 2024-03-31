@@ -144,39 +144,39 @@
 
     <div class="contact__form-and-links__container">
 
-      <ul class="social-cards__container">
+      <div class="form__wrapper">
+        <h3 class="form__title"></h3>
+        <form class="form">
+          <div class="form__input-wrapper">
+            <label for="name" class="form__label"></label>
+            <input type="text" class="form__input" name="name" id="name">
+          </div>
+          <div class="form__input-wrapper">
+            <label for="email" class="form__label"></label>
+            <input type="email" name="email" id="email" class="form__input">
+          </div>
+          <div class="form__input-wrapper">
+            <label for="message" class="form__label"></label>
+            <textarea name="message" id="message" cols="30" rows="10" class="form__input"></textarea>
+          </div>
+          <button type="submit" class="form__btn btn clickable"></button>
+        </form>
+      </div>
 
-        <!-- SocialLink component * 3 -->
-        <li class="social-link--card clickable">
-          <a href="#">
-            <Icon class="social-link__icon" />
-            <div class="social-link__text-wrapper">
+      <div class="social-cards__wrapper">
+        <ul class="social-cards__container">
+
+          <!-- SocialLink component * 3 -->
+          <li class="social-link--card clickable">
+            <a href="#">
+              <Icon class="social-link__icon" />
               <p class="social-link__platform"></p>
               <p class="social-link__handle"></p>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-
-      <form class="form">
-        <div class="form__input-wrapper">
-          <label for="name" class="form__label"></label>
-          <input type="text" class="form__input" name="name" id="name">
-        </div>
-
-        <div class="form__input-wrapper">
-          <label for="email" class="form__label"></label>
-          <input type="email" name="email" id="email" class="form__input">
-        </div>
-
-        <div class="form__input-wrapper">
-          <label for="message" class="form__label"></label>
-          <textarea name="message" id="message" cols="30" rows="10" class="form__input"></textarea>
-        </div>
-
-        <button type="submit" class="form__btn btn clickable"></button>
-      </form>
+            </a>
+          </li>
+  
+        </ul>
+      </div>
 
     </div>
   </div>
@@ -184,5 +184,21 @@
 
 <!-- FOOTER -->
 <footer class="footer">
+  <div class="footer__container">
 
+    <div class="footer__my-info">
+      <!-- tba -->
+    </div>
+
+    <ul class="footer__social-links">
+
+      <!-- SocialLink component * 3 -->
+      <li class="footer__social-link">
+        <a href="#">
+          <Icon class="social-link__icon" />
+        </a>
+      </li>
+
+    </ul>
+  </div>
 </footer>
