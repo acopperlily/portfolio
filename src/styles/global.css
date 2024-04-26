@@ -23,13 +23,10 @@
 
 body {
   font-family: var(--light-ss-ff);
-  background-image: url('../assets/bg-img.jpg');
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-color: rgb(127, 127, 127); */
+  /* background-blend-mode: darken; */
   color: var(--color-light);
 }
 
@@ -44,9 +41,23 @@ section {
   padding-bottom: 10rem;
 }
 
+.section--bg-image {
+  background-image: url('../assets/bg-portrait.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+
+header,
+footer,
+section {
+  padding-inline: 1rem;
+}
+
 .container {
+  /* border: 1px dashed yellow; */
   margin: 0 auto;
-  padding: 0 1rem;
   max-width: 75em;
 }
 
@@ -80,7 +91,6 @@ li {
   list-style-type: none;
 }
 
-
 /* Projects */
 
 
@@ -88,3 +98,16 @@ li {
 
 
 /* Footer */
+
+@media (min-width: 780px) {
+  body {
+    background-image: url('../assets/bg-landscape.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .bg-image {
+    background-image: none;
+    background-color: transparent;
+  }
+}

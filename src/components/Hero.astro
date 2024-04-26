@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import LinkButton from './LinkButton.astro';
 ---
-<section id="hero" class="hero">
+<section id="hero" class="hero section--bg-image">
   <div class="hero__container container">
 
     <div class="hero__logo-container">
@@ -53,7 +53,11 @@ import LinkButton from './LinkButton.astro';
   .hero {
     padding-top: 10rem;
     padding-bottom: 25rem;
-    background-color: transparent;
+/* 
+    background-image: url('../assets/bg-portrait.jpg');
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover; */
   }
 
   .hero__logo-container {

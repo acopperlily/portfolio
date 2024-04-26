@@ -1,23 +1,17 @@
 ---
-import MenuItem from "./MenuItem.astro"
-const menuItems = [
-  'home', 'about', 'projects', 'contact'
-];
+const { item } = Astro.props;
 ---
 
-<ul class="header__menu">
-
-  {menuItems.map(item => (
-    <MenuItem {item} />
-  ))}
-
-</ul>
+<li class="menu__list-item">
+  <a 
+    href={`#${item}`}
+    class="menu__list-link clickable"
+  >
+    {item}
+  </a>
+</li>
 
 <style>
-  .header__menu {
-    padding: 1rem 3rem;
-  }
-
   /* Create separators between menu items */
   .menu__list-item + li {
     border-top: 1px solid var(--color-med);
@@ -30,12 +24,6 @@ const menuItems = [
 
   /* Media Queries */ 
   @media (min-width: 60em) {
-
-    .header__menu {
-      padding: 0;
-      display: flex;
-      gap: 2rem;
-    }
 
     .menu__list-link {
       padding: 0;

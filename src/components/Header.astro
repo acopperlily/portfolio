@@ -3,11 +3,11 @@ import { Icon } from 'astro-icon/components';
 import Navigation from './Navigation.astro';
 ---
 
-<header class="header">
+<header class="header" >
   <div class="header__container container">
 
     <a 
-      href="#top" 
+      href="#home" 
       class="header__brand-wrapper clickable"
       aria-label="Back to home"
     >
@@ -49,8 +49,9 @@ import Navigation from './Navigation.astro';
 
   header {
     /* Keep header on top even when scrolling */
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
 
     /* For stacking context due to backdrop-filter */
     z-index: 10;
@@ -81,6 +82,7 @@ import Navigation from './Navigation.astro';
   }
 
   .header__container {
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,6 +111,10 @@ import Navigation from './Navigation.astro';
   .btn--hamburger {
     background-color: transparent;
     color: var(--color-light);
+
+    /* Gotta do this to get rid of weird spacing */
+    padding: 0;
+    display: flex;
   }
 
   .header__hamburger {
