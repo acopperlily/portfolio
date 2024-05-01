@@ -18,16 +18,6 @@ const menuItems = [
     padding: 1rem 3rem;
   }
 
-  /* Create separators between menu items */
-  .menu__list-item + li {
-    border-top: 1px solid var(--color-med);
-  }
-
-  .menu__list-link {
-    display: inline-block;
-    padding: 2rem;
-  }
-
   /* Media Queries */ 
   @media (min-width: 60em) {
 
@@ -35,16 +25,6 @@ const menuItems = [
       padding: 0;
       display: flex;
       gap: 2rem;
-    }
-
-    .menu__list-link {
-      padding: 0;
-    }
-
-    /* Remove separators from menu */
-    .menu__list-item + li {
-      /* Keeps from displaying on dark mode (???) */
-      border-top: 0 solid transparent;
     }
   }
   

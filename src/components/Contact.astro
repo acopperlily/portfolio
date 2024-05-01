@@ -83,17 +83,17 @@ const contactText = [
   }
 
   .form__input-wrapper {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .form__label {
     display: block;
     margin-bottom: 0.5rem;
-    font-family: var(--bold-ss-ff);
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-family: var(--font-stack-heading);
+    font-size: var(--font-size-300);
+    font-weight: var(--font-weight-semi-bold);
     text-transform: uppercase;
-    letter-spacing: var(--letter-spacing);
+    letter-spacing: var(--letter-spacing-medium);
   }
 
   .form__input {
@@ -111,41 +111,45 @@ const contactText = [
   .form__input:-moz-placeholder {
     color: var(--color-light);
     opacity: 1;
-    font-weight: 300;
-    letter-spacing: .1ch;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
   }
 
   .form__input::-moz-placeholder {
     color: var(--color-light);
     opacity: 1;
-    font-weight: 300;
-    letter-spacing: .1ch;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
   }
 
   .form__input::-webkit-input-placeholder {
     color: var(--color-light);
-    font-weight: 300;
-    letter-spacing: .1ch;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
   }
 
   .form__input::placeholder {
     color: var(--color-light);
-    font-weight: 300;
-    letter-spacing: .1ch;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
   }
 
   .form__btn {
-    margin-top: 3rem;
+    margin-top: 5rem;
     background-color: var(--color-light);
     border-radius: 5px;
     padding: 1.5rem;
-    width: 20rem;
+    width: 100%;
 
-    font-family: var(--bold-ss-ff);
-    font-size: 1rem;
-    font-weight: 700;
+    /* font-family: var(--bold-ss-ff); */
+    font-size: var(--font-size-600);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
-    letter-spacing: var(--letter-spacing);
+    letter-spacing: var(--letter-spacing-wide);
   }
 
   @media (min-width: 55em) {

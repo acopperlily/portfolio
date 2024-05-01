@@ -9,10 +9,35 @@
   --heading-bb-light: 2px solid var(--bg-color-bright);
   --heading-bb-dark: 2px solid var(--bg-color-dark);
 
-  /* Fonts */
-  --bold-ss-ff: 'Raleway', sans-serif;
-  --light-ss-ff: 'Source Sans 3', sans-serif;
-  --letter-spacing: 0.2em;
+  /* TEXT */
+  /* Font stacks */
+  --font-stack-heading: 'Raleway', 'Trebuchet MS', sans-serif;
+  --font-stack-body: 'Source Sans 3', sans-serif; 
+  --font-stack-body: 'Open Sans', 'Trebuchet MS', sans-serif;
+
+  /* Font sizes */
+  --font-size-200: clamp(0.5rem, 0.42rem + 0.427vw, 0.9rem);
+  --font-size-300: clamp(0.8rem, 0.76rem + 0.213vw, 1rem);
+  --font-size-400: clamp(1rem, 0.96rem + 0.213vw, 1.2rem);
+  --font-size-600: clamp(1.1rem, 1.07rem + 0.16vw, 1.25rem);
+  --font-size-700: clamp(1.25rem, 1.1rem + 0.8vw, 2rem);
+  --font-size-800: clamp(1.5rem, 1.2rem + 1.6vw, 3rem);
+  --font-size-900: clamp(2rem, 3.429vw + 1.357rem, 5rem);
+
+  /* Font weights */
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-thicc: 900;
+
+  /* Letter spacing */
+  --letter-spacing-narrow: 0.02em;
+  --letter-spacing-medium: 0.15em;
+  --letter-spacing-wide: 0.3em;
 
   --blur: 20px;
 }
@@ -22,7 +47,7 @@
 }
 
 body {
-  font-family: var(--light-ss-ff);
+  font-family: var(--font-stack-body);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   /* background-color: rgb(127, 127, 127); */
@@ -31,9 +56,33 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--bold-ss-ff);
+  font-family: var(--font-stack-heading);
   text-transform: uppercase;
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+h1 {
+  font-size: var(--font-size-900);
+}
+
+h2 {
+  font-size: var(--font-size-800);
+}
+
+h3 {
+  font-size: var(--font-size-700);
+}
+
+h4 {
+  font-size: var(--font-size-600);
+}
+
+p {
+  font-size: var(--font-size-400);
+  /* font-weight: var(--font-weight-thin); */
+  /* letter-spacing: var(--letter-spacing-narrow); */
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 section {
@@ -71,6 +120,7 @@ a:focus {
 }
 
 .btn {
+  font-family: var(--font-stack-heading);
   border: none;
 }
 
@@ -99,14 +149,16 @@ li {
 
 /* Footer */
 
-@media (min-width: 780px) {
+@media (min-width: 880px) {
   body {
+    /* background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply; */
     background-image: url('../assets/bg-landscape.jpg');
     background-size: cover;
     background-attachment: fixed;
   }
 
-  .bg-image {
+  .section--bg-image {
     background-image: none;
     background-color: transparent;
   }

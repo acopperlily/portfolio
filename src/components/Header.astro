@@ -56,9 +56,9 @@ import Navigation from './Navigation.astro';
     /* For stacking context due to backdrop-filter */
     z-index: 10;
 
-    font-family: var(--bold-ss-ff);
+    font-family: var(--font-stack-heading);
     text-transform: uppercase;
-    letter-spacing: var(--letter-spacing);
+    letter-spacing: var(--letter-spacing-wide);
   }
 
   /*  
@@ -82,6 +82,7 @@ import Navigation from './Navigation.astro';
   }
 
   .header__container {
+    /* border: 1px dotted pink; */
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -101,10 +102,11 @@ import Navigation from './Navigation.astro';
   }
 
   .header__title {
-    font-family: var(--bold-ss-ff);
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: var(--letter-spacing);
+    margin: 0;
+    font-family: var(--font-stack-heading);
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
   }
 
   /* Nav Button */
@@ -124,8 +126,8 @@ import Navigation from './Navigation.astro';
 
   /* Nav Menu */
   .header__nav {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: var(--font-size-300);
+    font-weight: var(--font-weight-medium);
     text-align: center;
 
     /* Create frosted glass effect */
