@@ -1,13 +1,58 @@
 :root {
-  /* Colors */
-  --bg-color-dark: rgba(47, 49, 65, 0.9);
+
+  /* OPACITY */
+  --opacity-high: 0.9;
+  --opacity-medium: 0.4;
+  --opacity-low: 0.1;
+
+
+  /* COLORS */
+  /* Hue */
+  --hue-primary: 213;
+  --hue-blue: hsl(214, 33%, 12%);
+  --hue-secondary: 270;
+  --hue-accent: 20;
+
+  /* Lightness */
+  --lightness-dark: 2%;
+
+  --color-primary: hsla(213, 39%, 9%, 0.7);
+  --color-primary-dark: hsl(var(--hue-primary), 39%, 9%);
+
+  --color-secondary: hsl(var(--hue-secondary), 16%, 22%);
+  --color-secondary-dark: hsl(var(--hue-secondary), 19%, 7%);
+  --color-light: hsl(var(--hue-accent), 29%, 90%);
+
+  --bg-color-dark: hsla(233, 16%, 22%, 0.9);
   --bg-color-bright: rgba(109, 105, 118, 0.9);
-  --color-light: rgba(255, 255, 255, 0.9);
+  /* --color-light: rgba(255, 255, 255, 0.9); */
   --color-med: rgba(122, 122, 129, 0.9);
   --color-dark: rgba(14, 22, 32, 0.7);
 
   --heading-bb-light: 2px solid var(--bg-color-bright);
   --heading-bb-dark: 2px solid var(--bg-color-dark);
+
+
+  /* BACKGROUND */
+  /* Mobile */
+  --bg-image-small: url('../assets/bg-portrait.jpg');
+  --bg-image-portrait-fb: url('../assets/bg-portrait-414-fallback.jpg');
+  --bg-image-portrait-sm: url('../assets/bg-portrait-414.webp');
+  --bg-image-portrait-lg: url('../assets/bg-portrait-720.webp');
+
+  /* Desktop */
+  --bg-image-landscape-fb: url('../assets/bg-landscape-1920-fallback.jpg');
+  --bg-image-landscape-sm: url('../assets/bg-landscape-1920.webp');
+  --bg-image-landscape-lg: url('../assets/bg-landscape-2880.webp');
+
+  --bg-overlay: 
+    hsla(
+      var(--hue-primary), 
+      0%, 
+      0%, 
+      var(--opacity-medium)
+    );
+
 
   /* TEXT */
   /* Font stacks */
@@ -48,10 +93,6 @@
 
 body {
   font-family: var(--font-stack-body);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  /* background-color: rgb(127, 127, 127); */
-  /* background-blend-mode: darken; */
   color: var(--color-light);
 }
 
@@ -91,11 +132,48 @@ section {
 }
 
 .section--bg-image {
-  background-image: url('../assets/bg-portrait.jpg');
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
+
+  /* Fallback bg */
+  background-image: 
+    linear-gradient(
+      var(--bg-overlay), 
+      var(--bg-overlay)
+    ),
+    var(--bg-image-portrait-fb);
+
+  /* Vendor prefixed bg */
+  background-image: 
+    linear-gradient(
+      var(--bg-overlay), 
+      var(--bg-overlay)
+    ),
+    -webkit-image-set(
+      var(--bg-image-portrait-sm) 1x,
+      var(--bg-image-portrait-lg) 2x
+    );
+
+  background-image: 
+    linear-gradient(
+      var(--bg-overlay), 
+      var(--bg-overlay)
+    ),
+    image-set(
+      var(--bg-image-portrait-sm) 1x,
+      var(--bg-image-portrait-lg) 2x
+    );
+
   background-position: center;
   background-size: cover;
+
+  /* Fallback background color */
+  background-color: 
+    hsla(
+      var(--hue-primary), 
+      100%, 
+      var(--lightness-dark), 
+      var(--opacity-high)
+    );
+
 }
 
 header,
@@ -151,11 +229,45 @@ li {
 
 @media (min-width: 880px) {
   body {
-    /* background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply; */
-    background-image: url('../assets/bg-landscape.jpg');
+
+    /* Fallback bg */
+    background-image:
+      linear-gradient(
+        var(--bg-overlay),
+        var(--bg-overlay)
+      ),
+      var(--bg-image-landscape-fb);
+
+    /* Vendor prefixed bg */
+    background-image:
+      linear-gradient(
+        var(--bg-overlay),
+        var(--bg-overlay)
+      ),
+      -webkit-image-set(
+        var(--bg-image-landscape-sm) 1x,
+        var(--bg-image-landscape-lg) 2x
+      );
+
+    background-image:
+      linear-gradient(
+        var(--bg-overlay),
+        var(--bg-overlay)
+      ),
+      image-set(
+        var(--bg-image-landscape-sm) 1x,
+        var(--bg-image-landscape-lg) 2x
+      );
+
     background-size: cover;
     background-attachment: fixed;
+
+    /* Fallback bg color */
+    background-color: 
+      hsla(var(--hue-primary), 
+      100%, 
+      var(--lightness-dark), 
+      var(--opacity-high));
   }
 
   .section--bg-image {
