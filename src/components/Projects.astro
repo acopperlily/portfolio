@@ -66,7 +66,7 @@ const images = [
 
   .projects {
     background-color: var(--bg-color-dark);
-    /* background-color: hsla(var(--color-secondary), 0.1); */
+    background-color: hsl(var(--hue-secondary), 10%, 30%);
   }
 
   .project-cards__container {
@@ -110,4 +110,11 @@ const images = [
     background-color: aqua;
     border: 1px dotted greenyellow;
   }
+
+  @media (min-width: 55em) {
+    .projects {
+      background-color: hsla(var(--hue-secondary), 10%, 30%, 0.9);
+    }
+  }
+
 </style>

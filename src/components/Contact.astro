@@ -9,7 +9,7 @@ const contactText = [
 ];
 ---
 
-<section id="contact" class="contact section--bg-image">
+<section id="contact" class="contact section--bg">
   <div class="contact__container container">
     <ImagePlusText
       src="headshot"
@@ -79,7 +79,7 @@ const contactText = [
   .social-cards__title {
     padding-bottom: 1rem;
     margin-bottom: 5rem;
-    border-bottom: 2px solid var(--color-med);
+    border-bottom: var(--border-thin);
   }
 
   .form__input-wrapper {
@@ -99,17 +99,16 @@ const contactText = [
   .form__input {
     padding: 0.7rem;
     width: 100%;
-    /* margin-bottom: 1.5rem; */
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: var(--color-frost);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    color: white;
-    border: 2px solid var(--color-med);
+    color: var(--color-lightest);
+    border: var(--border-thin);
     border-radius: 5px;
   }
 
   .form__input:-moz-placeholder {
-    color: var(--color-light);
+    color: var(--color-lightest);
     opacity: 1;
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-light);
@@ -117,7 +116,7 @@ const contactText = [
   }
 
   .form__input::-moz-placeholder {
-    color: var(--color-light);
+    color: var(--color-lightest);
     opacity: 1;
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-light);
@@ -125,14 +124,14 @@ const contactText = [
   }
 
   .form__input::-webkit-input-placeholder {
-    color: var(--color-light);
+    color: var(--color-lightest);
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-light);
     /* letter-spacing: var(--letter-spacing-narrow); */
   }
 
   .form__input::placeholder {
-    color: var(--color-light);
+    color: var(--color-lightest);
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-light);
     /* letter-spacing: var(--letter-spacing-narrow); */
@@ -140,7 +139,7 @@ const contactText = [
 
   .form__btn {
     margin-top: 5rem;
-    background-color: var(--color-light);
+    background-color: var(--color-lightest);
     border-radius: 5px;
     padding: 1.5rem;
     width: 100%;

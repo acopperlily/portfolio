@@ -62,17 +62,7 @@ const dateRange = '2022–2024';
 <style>
   footer {
     padding-block: 1.6rem;
-    /* background-color: rgba(5, 1, 13, 0.835); */
-    /* background-color: var(--color-secondary-dark); */
-    background-color: 
-      hsla(
-        var(--hue-primary), 
-        100%, 
-        var(--lightness-dark), 
-        1
-      );
-    /* /* -webkit-backdrop-filter: blur(20px); */
-    /* backdrop-filter: blur(20px); */
+    background-color: var(--color-darkest);
     text-align: center;
     text-transform: uppercase;
     font-weight: var(--font-weight-thin);
@@ -107,14 +97,7 @@ const dateRange = '2022–2024';
 
   @media (min-width: 880px) {
     footer {
-      background-color: 
-        hsla(
-          var(--hue-primary), 
-          100%, 
-          var(--lightness-dark), 
-          var(--opacity-low)
-        );
-
+      background-color: hsla(var(--color-darkest), var(--opacity-low));
       -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
     }

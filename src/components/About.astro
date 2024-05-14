@@ -28,7 +28,13 @@ const buttons = [
 <style>
 
   .about {
-    background-color: var(--bg-color-bright);
+    background-color: hsl(var(--hue-primary), 12%, 40%);
+  }
+
+  @media (min-width: 55em) {
+    .about {
+      background-color: hsla(var(--hue-primary), 12%, 40%, 0.9);
+    }
   }
 
 </style>

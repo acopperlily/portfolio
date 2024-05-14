@@ -9,28 +9,23 @@
   /* COLORS */
   /* Hue */
   --hue-primary: 213;
-  --hue-blue: hsl(214, 33%, 12%);
-  --hue-secondary: 270;
+  --hue-secondary: 240;
   --hue-accent: 20;
 
   /* Lightness */
   --lightness-dark: 2%;
 
-  --color-primary: hsla(213, 39%, 9%, 0.7);
-  --color-primary-dark: hsl(var(--hue-primary), 39%, 9%);
+  --color-lightest: hsl(var(--hue-accent), 50%, 90%);
+  --color-medium: hsl(var(--hue-secondary), 5%, 50%);
+  --color-dark: hsl(var(--hue-primary), 30%, 10%);
+  --color-darkest: hsl(var(--hue-primary), 100%, var(--lightness-dark));
 
-  --color-secondary: hsl(var(--hue-secondary), 16%, 22%);
-  --color-secondary-dark: hsl(var(--hue-secondary), 19%, 7%);
-  --color-light: hsl(var(--hue-accent), 29%, 90%);
+  --color-frost: hsla(var(--hue-accent), 0%, 100%, var(--opacity-low));
 
-  --bg-color-dark: hsla(233, 16%, 22%, 0.9);
-  --bg-color-bright: rgba(109, 105, 118, 0.9);
-  /* --color-light: rgba(255, 255, 255, 0.9); */
-  --color-med: rgba(122, 122, 129, 0.9);
-  --color-dark: rgba(14, 22, 32, 0.7);
 
-  --heading-bb-light: 2px solid var(--bg-color-bright);
-  --heading-bb-dark: 2px solid var(--bg-color-dark);
+  /* Borders */
+  --border-thin: 2px solid var(--color-medium);
+  --border-thicc: 3px solid var(--color-medium);
 
 
   /* BACKGROUND */
@@ -93,7 +88,9 @@
 
 body {
   font-family: var(--font-stack-body);
-  color: var(--color-light);
+  /* color: var(--color-light); */
+  /* color: hsl(var(--hue-accent), 50%, 90%); */
+  color: var(--color-lightest);
 }
 
 h1, h2, h3, h4 {
@@ -129,6 +126,10 @@ p {
 section {
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+
+.section--bg {
+  background-color: var(--color-dark);
 }
 
 .section--bg-image {
@@ -189,7 +190,7 @@ section {
 }
 
 a {
-  color: var(--color-light);
+  color: var(--color-lightest);
   text-decoration: none;
 }
 
@@ -227,7 +228,7 @@ li {
 
 /* Footer */
 
-@media (min-width: 880px) {
+@media (min-width: 55em ) {
   body {
 
     /* Fallback bg */
@@ -270,7 +271,7 @@ li {
       var(--opacity-high));
   }
 
-  .section--bg-image {
+  .section--bg, .section--bg-image {
     background-image: none;
     background-color: transparent;
   }

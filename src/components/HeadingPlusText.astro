@@ -15,12 +15,14 @@ if (variant) textClass += ` component__text--${variant}`;
 <style>
 
   .component__title {
-    border-bottom: var(--heading-bb-light);
+    /* border-bottom: 3px solid var(--color-medium); */
+    border-bottom: var(--border-thicc);
     padding-bottom: 1rem;
   }
 
   .component__title--card {
     font-size: var(--font-size-600);
+    border-bottom: var(--border-thin);
   }
 
   .component__text {
