@@ -10,7 +10,7 @@ const buttons = [
 ];
 ---
 
-<section id="about" class="about" >
+<section id="about" class="about section--positive-slope" >
 
   <div class="about__container container">
 
@@ -29,11 +29,17 @@ const buttons = [
 
   .about {
     background-color: hsl(var(--hue-primary), 12%, 40%);
+    padding-top: 11rem;
+    padding-bottom: 13rem;
+  }
+
+  .about__container {
+    /* padding-block: 11rem; */
   }
 
   @media (min-width: 55em) {
     .about {
-      background-color: hsla(var(--hue-primary), 12%, 40%, 0.9);
+      /* background-color: hsla(var(--hue-primary), 12%, 40%, 0.9); */
     }
   }
 

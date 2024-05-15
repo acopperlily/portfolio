@@ -52,12 +52,7 @@ import LinkButton from './LinkButton.astro';
 <style>
   .hero {
     padding-top: 10rem;
-    padding-bottom: 25rem;
-/* 
-    background-image: url('../assets/bg-portrait.jpg');
-    background-color: rgba(0, 0, 0, 0.3);
-    background-blend-mode: multiply;
-    background-size: cover; */
+    padding-bottom: 22rem;
   }
 
   .hero__logo-container {
@@ -111,6 +106,17 @@ import LinkButton from './LinkButton.astro';
     .hero__page-links {
       display: flex;
       gap: 2rem;
+    }
+
+    .hero::after {
+      /* content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -13rem;
+      height: 12rem;
+      background-color: hsl(var(--hue-primary), 12%, 40%);
+      transform: skewY(-5deg); */
     }
   }
 </style>

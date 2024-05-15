@@ -85,6 +85,9 @@
   --letter-spacing-wide: 0.3em;
 
   --blur: 20px;
+  --slope-height: 20rem;
+  --slope-degree: 5deg;
+  --slope-position: calc(var(--slope-height) / 2);
 }
 
 *, *::before, *::after {
@@ -129,8 +132,7 @@ p {
 }
 
 section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  position: relative;
 }
 
 .section--bg {
@@ -180,6 +182,29 @@ section {
       var(--opacity-high)
     );
 
+}
+
+.section--positive-slope::before,
+.section--negative-slope::before {
+  --slope: calc(var(--slope-position) * -1);
+  content: "";
+  position: absolute;
+  /* top: calc(var(--slope-height) / -2); */
+  top: var(--slope);
+  left: 0;
+  right: 0;
+  height: var(--slope-height);
+  background-color: hsl(var(--hue-primary), 12%, 40%);
+  transform: skewY(calc(var(--slope-degree) * -1));
+}
+
+
+.section--negative-slope::before {
+  transform: skewY(var(--slope-degree));
+}
+
+.section--bottom-slope::before {
+  background-color: var(--color-medium-dark);
 }
 
 header,
@@ -284,4 +309,5 @@ img {
     background-image: none;
     background-color: transparent;
   }
+
 }
