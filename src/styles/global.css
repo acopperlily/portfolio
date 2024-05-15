@@ -17,6 +17,7 @@
 
   --color-lightest: hsl(var(--hue-accent), 50%, 90%);
   --color-medium: hsl(var(--hue-secondary), 5%, 50%);
+  --color-medium-dark: hsl(var(--hue-secondary), 10%, 30%);
   --color-dark: hsl(var(--hue-primary), 30%, 10%);
   --color-darkest: hsl(var(--hue-primary), 100%, var(--lightness-dark));
 
@@ -26,6 +27,10 @@
   /* Borders */
   --border-thin: 2px solid var(--color-medium);
   --border-thicc: 3px solid var(--color-medium);
+
+  --border-radius-circle: 50%;
+  --border-radius-soft: 5px;
+  --border-radius-sharp: 2px;
 
 
   /* BACKGROUND */
@@ -218,6 +223,10 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* Projects */

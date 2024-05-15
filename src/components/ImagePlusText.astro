@@ -2,15 +2,21 @@
 import { Image } from 'astro:assets';
 import HeadingPlusText from './HeadingPlusText.astro';
 import LinkButton from './LinkButton.astro';
-import discovery from '../assets/discovery.jpg';
-import headshot from '../assets/headshotsquare.jpg';
+// import discovery from '../assets/discovery.jpg';
+import discovery from '../assets/discovery.webp'; // 1995px
+// import headshot from '../assets/headshotsquare.jpg';
+import headshot from '../assets/headshot.webp'; // 2231px
 const { src, alt, title, text, buttons } = Astro.props;
+
+const imgSrc = src === 'discovery' ? discovery : headshot;
 ---
 
 <div class="component__content-wrapper">
   <div class="component__image-wrapper">
     <Image
-      src={src === 'discovery' ? discovery : headshot}
+      src={imgSrc}
+      width="600"
+      densities={[1, 2, 3]}
       alt={alt}
       class="component__image"
     />
@@ -31,14 +37,14 @@ const { src, alt, title, text, buttons } = Astro.props;
 <style>
 
   .component__image-wrapper {
-    max-width: 20em;
+    max-width: 25em;
     margin: 0 auto;
   }
 
   .component__image {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
   }
 
   @media (min-width: 60em) {

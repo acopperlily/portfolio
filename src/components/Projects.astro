@@ -5,15 +5,18 @@ import HeadingPlusText from './HeadingPlusText.astro';
 import LinkButton from './LinkButton.astro';
 
 import dcImage from '../assets/digital-canvas.png';
+import digitalCanvas from '../assets/digital-canvas.webp';
 import hhcImage from '../assets/happy-hour-cocktails.png';
+import happyHourCocktails from '../assets/happy-hour-cocktails.webp';
 import codImage from '../assets/cats-on-demand.png';
+import catsOnDemand from '../assets/cats-on-demand.webp';
 
 import projects from '../scripts/projects.js';
 
 const images = [
-  dcImage,
-  hhcImage,
-  codImage
+  digitalCanvas,
+  happyHourCocktails,
+  catsOnDemand
 ];
 ---
 
@@ -36,6 +39,8 @@ const images = [
           <div class="project-card__image-container">
             <Image 
               src={images[i]} 
+              width={600}
+              densities={[1, 2, 3]}
               alt={project.name}
               class="project-card__image"
             />
@@ -65,8 +70,7 @@ const images = [
 <style>
 
   .projects {
-    background-color: var(--bg-color-dark);
-    background-color: hsl(var(--hue-secondary), 10%, 30%);
+    background-color: var(--color-medium-dark);
   }
 
   .project-cards__container {
@@ -78,7 +82,7 @@ const images = [
 
   .project-card {
     background-color: var(--color-dark);
-    border-radius: 5px;
+    border-radius: var(--border-radius-soft);
   }
 
   .project-card__image-container {
