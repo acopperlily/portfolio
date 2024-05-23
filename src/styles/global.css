@@ -26,11 +26,11 @@
 
   /* Borders */
   --border-thin: 2px solid var(--color-medium);
-  --border-thicc: 3px solid var(--color-medium);
+  --border-chonk: 3px solid var(--color-medium);
 
   --border-radius-circle: 50%;
-  --border-radius-soft: 5px;
-  --border-radius-sharp: 2px;
+  --border-radius-soft: 15px;
+  --border-radius-sharp: 5px;
 
 
   /* BACKGROUND */
@@ -63,11 +63,16 @@
   /* Font sizes */
   --font-size-200: clamp(0.5rem, 0.42rem + 0.427vw, 0.9rem);
   --font-size-300: clamp(0.8rem, 0.76rem + 0.213vw, 1rem);
-  --font-size-400: clamp(1rem, 0.96rem + 0.213vw, 1.2rem);
+  
+  /* --font-size-400: clamp(1rem, 0.96rem + 0.213vw, 1.2rem); */
+  --font-size-400: clamp(0.9rem, 0.84rem + 0.3vw, 1.2rem);
+  /* --font-size-400: 1rem; */
+  --font-size-500: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
   --font-size-600: clamp(1.1rem, 1.07rem + 0.16vw, 1.25rem);
-  --font-size-700: clamp(1.25rem, 1.1rem + 0.8vw, 2rem);
-  --font-size-800: clamp(1.5rem, 1.2rem + 1.6vw, 3rem);
-  --font-size-900: clamp(2rem, 3.429vw + 1.357rem, 5rem);
+  --font-size-700: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  /* --font-size-800: clamp(1.5rem, 1.2rem + 1.6vw, 3rem); */
+  --font-size-800: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
+  --font-size-900: clamp(2rem, 1.4rem + 3vw, 5rem);
 
   /* Font weights */
   --font-weight-thin: 200;
@@ -77,7 +82,7 @@
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
-  --font-weight-thicc: 900;
+  --font-weight-chonk: 900;
 
   /* Letter spacing */
   --letter-spacing-narrow: 0.02em;
@@ -109,10 +114,13 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: var(--font-size-900);
+  /* font-size: 2rem; */
 }
 
 h2 {
   font-size: var(--font-size-800);
+  /* font-size: 2rem;
+  font-size: 1.25rem; */
 }
 
 h3 {
@@ -133,6 +141,7 @@ p {
 
 section {
   position: relative;
+  text-align: center;
 }
 
 .section--bg {
@@ -195,6 +204,8 @@ section {
   right: 0;
   height: var(--slope-height);
   background-color: hsl(var(--hue-primary), 12%, 40%);
+  /* background-color: var(--color-medium-dark); */
+
   transform: skewY(calc(var(--slope-degree) * -1));
 }
 
@@ -205,12 +216,15 @@ section {
 
 .section--bottom-slope::before {
   background-color: var(--color-medium-dark);
+  /* background-color: hsl(var(--hue-primary), 12%, 40%); */
+
+  
 }
 
 header,
 footer,
 section {
-  padding-inline: 1rem;
+  padding-inline: clamp(0.5rem, -0.929rem + 7.143vw, 3rem);
 }
 
 .container {
@@ -254,6 +268,10 @@ img {
   max-width: 100%;
 }
 
+label {
+  text-align: left;
+}
+
 /* Projects */
 
 
@@ -262,7 +280,7 @@ img {
 
 /* Footer */
 
-@media (min-width: 55em ) {
+@media (min-width: 50em ) {
   body {
 
     /* Fallback bg */
@@ -303,6 +321,10 @@ img {
       100%, 
       var(--lightness-dark), 
       var(--opacity-high));
+  }
+
+  section {
+    text-align: left;
   }
 
   .section--bg, .section--bg-image {

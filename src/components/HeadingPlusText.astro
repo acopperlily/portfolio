@@ -16,13 +16,15 @@ if (variant) textClass += ` component__text--${variant}`;
 
   .component__title {
     /* border-bottom: 3px solid var(--color-medium); */
-    border-bottom: var(--border-thicc);
+    border-bottom: var(--border-chonk);
     padding-bottom: 1rem;
   }
 
   .component__title--card {
-    font-size: var(--font-size-600);
+    text-align: center;
+    font-size: var(--font-size-500);
     border-bottom: var(--border-thin);
+    padding-bottom: 0.75rem;
   }
 
   .component__text {
@@ -32,8 +34,10 @@ if (variant) textClass += ` component__text--${variant}`;
   }
 
   .component__text--card {
-    /* font-size: 1rem; */
-    /* font-size: var(--font-size-600); */
-    /* font-weight: 400; */
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-size: var(--font-size-300);
+    font-weight: var(--font-weight-light);
   }
 </style>

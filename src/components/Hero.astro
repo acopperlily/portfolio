@@ -5,20 +5,20 @@ import LinkButton from './LinkButton.astro';
 <section id="hero" class="hero section--bg-image">
   <div class="hero__container container">
 
-    <div class="hero__logo-container">
+    <!-- <div class="hero__logo-container">
       <Icon 
         name="rocket" 
         class="hero__logo" 
         aria-hidden="true"
       />
-    </div>
+    </div> -->
 
     <p class="hero__greeting">Hello, World</p>
 
     <h1 
       class="hero__title"
     >
-      I'm <strong>April</strong>, and I'm a <em>software engineer</em>
+      I'm <strong>April</strong>, and I'm a full-stack <em>software engineer</em>
     </h1>
 
     <div class="hero__page-links">
@@ -51,15 +51,16 @@ import LinkButton from './LinkButton.astro';
 
 <style>
   .hero {
-    padding-top: 10rem;
+    padding-top: 12rem;
     padding-bottom: 22rem;
   }
 
   .hero__logo-container {
+    margin: 0 auto;
     border: var(--border-thin);
     border-radius: var(--border-radius-circle);
-    width: 5rem;
-    height: 5rem;
+    width: clamp(4rem, 3.8rem + 1vw, 5rem);
+    height: clamp(4rem, 3.8rem + 1vw, 5rem);
 
     display: flex;
     justify-content: center;
@@ -67,16 +68,18 @@ import LinkButton from './LinkButton.astro';
   }
 
   .hero__logo {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: clamp(2rem, 1.8rem + 1vw, 3rem);
+    height: clamp(2rem, 1.8rem + 1vw, 3rem);
   }
 
   .hero__greeting {
-    padding-bottom: 1rem;
+    /* margin-top: 2rem; */
+    padding-bottom: 0.5rem;
+    /* margin-bottom: 2rem; */
     font-size: 4rem;
     font-size: var(--font-size-900);
-    /* font-size: 2rem; */
-    border-bottom: var(--border-thicc);
+    line-height: 1.2;
+    border-bottom: var(--border-chonk);
     font-family: var(--font-stack-heading);
     font-weight: var(--font-weight-semi-bold);
     text-transform: uppercase;
@@ -87,36 +90,33 @@ import LinkButton from './LinkButton.astro';
   .hero__title {
     font-size: var(--font-size-700);
     font-weight: var(--font-weight-light);
+    line-height: 1.4;
+    /* letter-spacing: normal; */
   }
 
   .hero__title strong {
     font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-medium);
   }
 
   .hero__title em {
     font-style: normal;
     font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-medium);
   }
 
   .hero__page-links {
-    margin-top: 6em;
+    margin-top: 8rem;
   }
 
   @media (min-width: 50em) {
-    .hero__page-links {
-      display: flex;
-      gap: 2rem;
+    .hero__logo-container {
+      margin: 0;
     }
 
-    .hero::after {
-      /* content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -13rem;
-      height: 12rem;
-      background-color: hsl(var(--hue-primary), 12%, 40%);
-      transform: skewY(-5deg); */
+    .hero__page-links {
+      display: flex;
+      gap: 3rem;
     }
   }
 </style>

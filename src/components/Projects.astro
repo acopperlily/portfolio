@@ -28,7 +28,7 @@ const images = [
       <HeadingPlusText
         headingLevel="h2"
         title="Projects"
-        text={["The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless."]}
+        text={["The universe knows no limits, and neither should your imagination.", "From vanilla JavaScript to APIs, creativity and possibilities are boundless."]}
       />
 
     </div>
@@ -71,24 +71,32 @@ const images = [
 
   .projects {
     background-color: var(--color-medium-dark);
+    /* background-color: hsl(var(--hue-primary), 12%, 40%); */
+
     padding-top: 22rem;
     padding-bottom: 18rem;
   }
 
   .project-cards__container {
-    margin-top: 5rem;
+    /* border: 1px solid yellow; */
+    margin-top: 10rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+    gap: 8rem;
   }
 
   .project-card {
     background-color: var(--color-dark);
-    border-radius: var(--border-radius-soft);
+    border-radius: var(--border-radius-sharp);
+    /* border: 1px solid red; */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .project-card__image-container {
-    border-radius: 5px 5px 0 0;
+    border-radius: var(--border-radius-sharp) var(--border-radius-sharp) 0 0;
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
@@ -102,14 +110,19 @@ const images = [
   }
 
   .project-card__info-container {
+    flex: 1;
+    /* margin-top: 1rem; */
     /* border: 1px dotted yellow; */
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    /* height: 100%; */
+    /* height: max-content; */
+    justify-content: center;
     justify-content: space-between;
     /* align-items: stretch; */
-    /* gap: 3rem; */
-    padding: 1rem;
+    /* gap: 1rem; */
+    padding: 1.5rem;
+    padding: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
   }
 
   .project-card__info-container > * {
@@ -117,8 +130,15 @@ const images = [
     border: 1px dotted greenyellow;
   }
 
+  @media (min-width: 26em) {
+    .project-cards__container {
+      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+      gap: clamp(5rem, 4rem - 5vw, 10rem);
+    }
+  }
+
   @media (min-width: 55em) {
-    .projects {
+    .project {
       /* background-color: hsla(var(--hue-secondary), 10%, 30%, 0.9); */
     }
   }

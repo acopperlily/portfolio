@@ -5,7 +5,8 @@ const { link, page, icon, title, isExternal = false } = Astro.props;
 const newWindow = {
   ...(isExternal && {
     target: '_blank', 
-    rel: 'noopener noreferrer' 
+    rel: 'noopener noreferrer',
+    class: '--card'
   })
 };
 ---
@@ -13,28 +14,29 @@ const newWindow = {
 <a 
   href={link}
   aria-label={`Navigate to ${page}`}
-  class="link__wrapper clickable"
+  class={`link__wrapper${isExternal ? newWindow.class : ''} clickable`}
   {...newWindow}
 >
   <Icon
     name={icon} 
     aria-hidden="true"
-    class="link__icon"
+    class={`link__icon${isExternal ? newWindow.class : ''}`}
   />
-  <span class="link__title">{title}</span>
+  <span class={`link__title${isExternal ? newWindow.class : ''}`}>{title}</span>
 </a>
 
 <style>
 
-  .link__wrapper {
-    /* border: 1.5px solid var(--color-medium); */
+  .link__wrapper,
+  .link__wrapper--card {
+    margin-bottom: 2rem;
     border: var(--border-thin);
-    border-radius: 15px;
-    padding: 1rem 2rem;
+    border-radius: var(--border-radius-soft);
+    padding: 1.2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
-    max-width: fit-content;
     background-color: var(--color-frost);
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
@@ -42,12 +44,31 @@ const newWindow = {
 
   .link__icon {
     font-size: 1.25rem;
+    font-size: var(--font-size-400);
+  }
+
+  .link__icon--card {
+    font-size: var(--font-size-300);
+  }
+
+  .link__title,
+  .link__title--card {
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-medium);
   }
 
   .link__title {
     font-size: var(--font-size-400);
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-    letter-spacing: var(--letter-spacing-medium);
+  }
+
+  .link__title--card {
+    font-size: var(--font-size-300);
+  }
+
+  @media (min-width: 50em) {
+    .link__wrapper {
+      width: 14rem;
+    }
   }
 </style>
