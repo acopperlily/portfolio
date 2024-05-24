@@ -11,7 +11,7 @@ const { src, alt, title, text, buttons } = Astro.props;
 const imgSrc = src === 'discovery' ? discovery : headshot;
 ---
 
-<div class="component__content-wrapper">
+<!-- <div class="component__content-wrapper"> -->
   <div class="component__image-wrapper">
     <Image
       src={imgSrc}
@@ -32,13 +32,16 @@ const imgSrc = src === 'discovery' ? discovery : headshot;
       {buttons.map(button => <LinkButton link={button.link} page={button.page} icon={button.icon} title={button.title}/>)}
     </div>}
   </div>
-</div>
+<!-- </div> -->
 
 <style>
 
   .component__image-wrapper {
     max-width: 25em;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .component__image {
@@ -47,26 +50,29 @@ const imgSrc = src === 'discovery' ? discovery : headshot;
     border-radius: var(--border-radius-circle);
   }
 
-  @media (min-width: 60em) {
+  .buttons-wrapper {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .component__content-wrapper {
-      display: flex;
-      flex-direction: row-reverse;
-      /* justify-content: space-between; */
-      align-items: center;
-      gap: 3rem;
+  @media (min-width: 50em) {
+    .buttons-wrapper {
+      flex-direction: row;
     }
+  }
+
+  @media (min-width: 62em) {
 
     .component__text-wrapper {
       text-align: right;
-      max-width: 40em;
+      /* max-width: 40em; */
+      order: -1;
     }
 
     .buttons-wrapper {
-      margin-top: 1.5rem;
-      display: flex;
       justify-content: flex-end;
-      gap: 2rem;
     }
   }
 </style>

@@ -10,7 +10,7 @@ const contactText = [
 ---
 
 <section class="contact section--bg section--positive-slope section--bottom-slope">
-  <div id="contact" class="contact__container container">
+  <div id="contact" class="contact__container container--grid">
     <ImagePlusText
       src="headshot"
       alt="Me"
@@ -18,7 +18,7 @@ const contactText = [
       text={contactText}
     />
 
-    <div class="contact__form-and-links__container">
+    <!-- <div class="contact__form-and-links__container"> -->
 
       <div class="form__wrapper">
         <h3 class="form__title">Contact</h3>
@@ -52,7 +52,7 @@ const contactText = [
           ))}
         </ul>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </section>
 
@@ -66,7 +66,7 @@ const contactText = [
 
   .contact__form-and-links__container {
     margin-top: 5rem;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     gap: 5em;
   }
@@ -159,7 +159,7 @@ const contactText = [
 
   @media (min-width: 55em) {
     .contact__form-and-links__container {
-      flex-direction: row;
+      /* flex-direction: row; */
     }
   }
 </style>

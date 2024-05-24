@@ -227,10 +227,18 @@ section {
   padding-inline: clamp(0.5rem, -0.929rem + 7.143vw, 3rem);
 }
 
-.container {
+.container,
+.container--grid {
   /* border: 1px dashed yellow; */
   margin: 0 auto;
   max-width: 75em;
+}
+
+.container--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 8rem;
 }
 
 a {
@@ -332,4 +340,11 @@ label {
     background-color: transparent;
   }
 
+}
+
+@media (min-width: 62em) {
+  .container--grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: clamp(3rem, 2.2rem + 4vw, 7rem);
+  }
 }

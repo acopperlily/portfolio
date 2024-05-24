@@ -15,9 +15,11 @@ if (variant) textClass += ` component__text--${variant}`;
 <style>
 
   .component__title {
+    --letter-spacing-offset: calc(var(--letter-spacing-wide) * -1);
     /* border-bottom: 3px solid var(--color-medium); */
     border-bottom: var(--border-chonk);
     padding-bottom: 1rem;
+    /* margin-right: var(--letter-spacing-offset); */
   }
 
   .component__title--card {
@@ -30,7 +32,7 @@ if (variant) textClass += ` component__text--${variant}`;
   .component__text {
     /* font-size: 1.2rem; */
     /* font-weight: 300; */
-    /* line-height: 1.3; */
+    line-height: 1.7;
   }
 
   .component__text--card {
@@ -39,5 +41,6 @@ if (variant) textClass += ` component__text--${variant}`;
     font-size: 1rem;
     font-size: var(--font-size-300);
     font-weight: var(--font-weight-light);
+    line-height: 1.7;
   }
 </style>
