@@ -22,6 +22,7 @@
   --color-darkest: hsl(var(--hue-primary), 100%, var(--lightness-dark));
 
   --color-frost: hsla(var(--hue-accent), 0%, 100%, var(--opacity-low));
+  --color-text-decoration: hsla(var(--hue-secondary), 5%, 50%, var(--opacity-medium));
 
 
   /* Borders */
@@ -39,6 +40,8 @@
   --bg-image-portrait-fb: url('../assets/bg-portrait-414-fallback.jpg');
   --bg-image-portrait-sm: url('../assets/bg-portrait-414.webp');
   --bg-image-portrait-lg: url('../assets/bg-portrait-720.webp');
+  --bg-image-portrait-xlg: url('../assets/bg-portrait-1440.webp');
+  --bg-image-portrait: url('../assets/bg-portrait.jpg');
 
   /* Desktop */
   --bg-image-landscape-fb: url('../assets/bg-landscape-1920-fallback.jpg');
@@ -165,8 +168,8 @@ section {
       var(--bg-overlay)
     ),
     -webkit-image-set(
-      var(--bg-image-portrait-sm) 1x,
-      var(--bg-image-portrait-lg) 2x
+      var(--bg-image-portrait-lg) 1x,
+      var(--bg-image-portrait-xlg) 2x
     );
 
   background-image: 
@@ -175,12 +178,12 @@ section {
       var(--bg-overlay)
     ),
     image-set(
-      var(--bg-image-portrait-sm) 1x,
-      var(--bg-image-portrait-lg) 2x
+      var(--bg-image-portrait-lg) 1x,
+      var(--bg-image-portrait-xlg) 2x
     );
 
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
 
   /* Fallback background color */
   background-color: 

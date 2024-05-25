@@ -24,7 +24,7 @@ const { platform, url, handle, className } = Astro.props;
 
 <style>
   .footer__social-link {
-    font-size: 1.3rem;
+    font-size: var(--font-size-300);
   }
 
   .social-link--card:focus {
@@ -67,7 +67,5 @@ const { platform, url, handle, className } = Astro.props;
     text-transform: uppercase;
     /* letter-spacing: var(--letter-spacing-wide); */
   }
-
-
 
 </style>

@@ -31,7 +31,7 @@ const dateRange = '2022–2024';
     </div>
 
     <div class="footer__attributions-wrapper">
-      <p class="footer__attributions">
+      <p class="footer__attribution">
         Design inspired by: 
         <a 
           href="https://html5up.net/solid-state"
@@ -41,9 +41,10 @@ const dateRange = '2022–2024';
         >
           HTML5Up
         </a>
+      </p>
       
-        <span class="vertical-divider"> | </span>
-
+        <!-- <span class="vertical-divider"> | </span> -->
+      <p class="footer__attribution">
         Space photo: 
         <a 
           href="https://www.pexels.com/@philippedonn/"
@@ -75,6 +76,7 @@ const dateRange = '2022–2024';
   }
 
   .footer__info-wrapper {
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,11 +86,21 @@ const dateRange = '2022–2024';
   .footer__link {
     font-weight: var(--font-weight-regular);
     letter-spacing: var(--letter-spacing-narrow);
+    border-bottom: 2px dotted var(--color-text-decoration);
+
   }
 
   .footer__social-links {
     display: flex;
     gap: 0.7rem;
+  }
+
+  .footer__attributions-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.2rem;
+    row-gap: 0.5rem;
   }
 
   .vertical-divider {
