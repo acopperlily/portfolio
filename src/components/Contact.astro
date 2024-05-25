@@ -2,6 +2,13 @@
 import socialInfo from '../scripts/socialInfo.js';
 import SocialLink from './SocialLink.astro';
 import ImagePlusText from './ImagePlusText.astro';
+import FormInput from './FormInput.astro';
+
+const inputFields = [
+  {type: 'text', name: 'name', placeholder: 'Ada Lovelace', maxlength: 99},
+  {type: 'text', name: 'email', placeholder: 'adalovelace@gmail.com', maxlength: 99},
+  {type: 'textarea', name: 'message', placeholder: 'Please enter your message here...', maxlength: 999, cols: 30, rows: 12}
+];
 
 const contactText = [
   "Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.",
@@ -18,41 +25,36 @@ const contactText = [
       text={contactText}
     />
 
-    <!-- <div class="contact__form-and-links__container"> -->
 
-      <div class="form__wrapper">
-        <h3 class="form__title">Contact</h3>
-        <form class="form" action="">
-          <div class="form__input-wrapper">
-            <label class="form__label" for="name">Name</label>
-            <input class="form__input" type="text" name="name" id="name" placeholder="Ada Lovelace" required >
-          </div>
-          <div class="form__input-wrapper">
-            <label class="form__label" for="email">Email</label>
-            <input class="form__input" type="email" name="email" id="email" placeholder="adalovelace@gmail.com" required >
-          </div>
-          <div class="form__input-wrapper">
-            <label class="form__label" for="message">Message</label>
-            <textarea class="form__input" name="message" id="message" placeholder="Please enter your message here..." required cols="30" rows="5"></textarea>
-          </div>
-          <button type="submit" class="form__btn btn clickable">Send Message</button>
-        </form>
-      </div>
+    <div class="form__wrapper">
+      <h3 class="form__title">Contact</h3>
+      <form class="form" action="">
 
-      <div class="social-cards__wrapper">
-        <h3 class="social-cards__title">Connect</h3>
-        <ul class="social-cards__container" >
-          {socialInfo.map(si => (
-            <SocialLink
-              platform={si.platform}
-              url={si.url}
-              handle={si.handle}
-              className="social-link--card"
-            />
-          ))}
-        </ul>
-      </div>
-    <!-- </div> -->
+        {inputFields.map(field => <FormInput {...field} />)}
+
+        <button 
+          type="submit" 
+          class="form__btn btn clickable"
+        >
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+    <div class="social-cards__wrapper">
+      <h3 class="social-cards__title">Connect</h3>
+      <ul class="social-cards__container" >
+        {socialInfo.map(si => (
+          <SocialLink
+            platform={si.platform}
+            url={si.url}
+            handle={si.handle}
+            className="social-link--card"
+          />
+        ))}
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -64,19 +66,13 @@ const contactText = [
     padding-bottom: 10rem;
   }
 
-  .contact__form-and-links__container {
-    margin-top: 5rem;
-    /* display: flex; */
-    flex-direction: column;
-    gap: 5em;
-  }
-
   .social-cards__wrapper {
     padding-left: 0;
     flex: 1;
   }
 
   .form__wrapper {
+    margin-bottom: 5rem;
     width: 100%;
     flex: 1.5;
   }
@@ -86,61 +82,6 @@ const contactText = [
     padding-bottom: 1rem;
     margin-bottom: 5rem;
     border-bottom: var(--border-thin);
-  }
-
-  .form__input-wrapper {
-    margin-top: 3rem;
-  }
-
-  .form__label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-family: var(--font-stack-heading);
-    font-size: var(--font-size-300);
-    font-weight: var(--font-weight-semi-bold);
-    text-transform: uppercase;
-    letter-spacing: var(--letter-spacing-medium);
-  }
-
-  .form__input {
-    padding: 0.7rem;
-    width: 100%;
-    background-color: var(--color-frost);
-    -webkit-backdrop-filter: blur(--blur);
-    backdrop-filter: blur(var(--blur));
-    color: var(--color-lightest);
-    border: var(--border-thin);
-    border-radius: 5px;
-  }
-
-  .form__input:-moz-placeholder {
-    color: var(--color-lightest);
-    opacity: 1;
-    font-size: var(--font-size-400);
-    font-weight: var(--font-weight-light);
-    /* letter-spacing: var(--letter-spacing-narrow); */
-  }
-
-  .form__input::-moz-placeholder {
-    color: var(--color-lightest);
-    opacity: 1;
-    font-size: var(--font-size-400);
-    font-weight: var(--font-weight-light);
-    /* letter-spacing: var(--letter-spacing-narrow); */
-  }
-
-  .form__input::-webkit-input-placeholder {
-    color: var(--color-lightest);
-    font-size: var(--font-size-400);
-    font-weight: var(--font-weight-light);
-    /* letter-spacing: var(--letter-spacing-narrow); */
-  }
-
-  .form__input::placeholder {
-    color: var(--color-lightest);
-    font-size: var(--font-size-400);
-    font-weight: var(--font-weight-light);
-    /* letter-spacing: var(--letter-spacing-narrow); */
   }
 
   .form__btn {
@@ -157,9 +98,4 @@ const contactText = [
     letter-spacing: var(--letter-spacing-wide);
   }
 
-  @media (min-width: 55em) {
-    .contact__form-and-links__container {
-      /* flex-direction: row; */
-    }
-  }
 </style>

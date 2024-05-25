@@ -1,0 +1,90 @@
+---
+const { type, name, ...props } = Astro.props;
+
+let attributes = {
+  class: 'form__input',
+  type,
+  name,
+  id: name,
+  ...props,
+  required: true
+};
+
+---
+
+<div class="form__input-wrapper">
+  <label 
+    class="form__label"
+    for={name}
+  >
+    {name}
+  </label>
+
+  {type === 'text' ? (
+    <input {...attributes} />
+  ) : (
+    <textarea {...attributes} ></textarea>
+  )}
+
+</div>
+
+<style>
+  .form__input-wrapper {
+    margin-top: 3rem;
+  }
+
+  .form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-stack-heading);
+    font-size: var(--font-size-300);
+    font-weight: var(--font-weight-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-medium);
+  }
+
+  .form__input {
+    padding: 0.7rem;
+    width: 100%;
+    background-color: var(--color-frost);
+    -webkit-backdrop-filter: blur(--blur);
+    backdrop-filter: blur(var(--blur));
+    color: var(--color-lightest);
+    border: var(--border-thin);
+    border-radius: 5px;
+  }
+
+  .form__input:-moz-placeholder {
+    color: var(--color-lightest);
+    opacity: 1;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
+  }
+
+  .form__input::-moz-placeholder {
+    color: var(--color-lightest);
+    opacity: 1;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
+  }
+
+  .form__input::-webkit-input-placeholder {
+    color: var(--color-lightest);
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
+  }
+
+  .form__input::placeholder {
+    color: var(--color-lightest);
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-light);
+    /* letter-spacing: var(--letter-spacing-narrow); */
+  }
+
+  textarea {
+    resize: none;
+  }
+</style>
