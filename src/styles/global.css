@@ -73,8 +73,8 @@
   --font-size-500: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
   --font-size-600: clamp(1.1rem, 1.07rem + 0.16vw, 1.25rem);
   --font-size-700: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
-  /* --font-size-800: clamp(1.5rem, 1.2rem + 1.6vw, 3rem); */
   --font-size-800: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
+  --font-size-850: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
   --font-size-900: clamp(2rem, 1.4rem + 3vw, 5rem);
 
   /* Font weights */
@@ -92,6 +92,8 @@
   --letter-spacing-medium: 0.15em;
   --letter-spacing-wide: 0.3em;
 
+
+  /* STUFF */
   --blur: 20px;
   --slope-height: 20rem;
   --slope-degree: 5deg;
@@ -104,8 +106,6 @@
 
 body {
   font-family: var(--font-stack-body);
-  /* color: var(--color-light); */
-  /* color: hsl(var(--hue-accent), 50%, 90%); */
   color: var(--color-lightest);
 }
 
@@ -117,13 +117,10 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: var(--font-size-900);
-  /* font-size: 2rem; */
 }
 
 h2 {
   font-size: var(--font-size-800);
-  /* font-size: 2rem;
-  font-size: 1.25rem; */
 }
 
 h3 {
@@ -207,8 +204,6 @@ section {
   right: 0;
   height: var(--slope-height);
   background-color: hsl(var(--hue-primary), 12%, 40%);
-  /* background-color: var(--color-medium-dark); */
-
   transform: skewY(calc(var(--slope-degree) * -1));
 }
 
@@ -219,9 +214,6 @@ section {
 
 .section--bottom-slope::before {
   background-color: var(--color-medium-dark);
-  /* background-color: hsl(var(--hue-primary), 12%, 40%); */
-
-  
 }
 
 header,
@@ -241,7 +233,8 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 8rem;
+  column-gap: clamp(3rem, 2.2rem + 4vw, 7rem);
+  row-gap: 6rem;
 }
 
 a {
@@ -348,6 +341,6 @@ label {
 @media (min-width: 62em) {
   .container--grid {
     grid-template-columns: 1.25fr 1fr;
-    gap: clamp(3rem, 2.2rem + 4vw, 7rem);
+    row-gap: 14rem;
   }
 }

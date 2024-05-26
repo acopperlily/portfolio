@@ -67,25 +67,31 @@ const contactText = [
   }
 
   .social-cards__wrapper {
-    padding-left: 0;
-    flex: 1;
+    margin-top: 4rem;
   }
 
   .form__wrapper {
-    margin-bottom: 5rem;
+    margin-top: 4rem;
     width: 100%;
-    flex: 1.5;
+  }
+
+  form,
+  .social-cards__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
   }
 
   .form__title,
   .social-cards__title {
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
     margin-bottom: 5rem;
     border-bottom: var(--border-thin);
   }
 
   .form__btn {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     background-color: var(--color-lightest);
     border-radius: 5px;
     padding: 1.5rem;

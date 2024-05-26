@@ -29,10 +29,21 @@ if (variant) textClass += ` component__text--${variant}`;
     padding-bottom: 0.75rem;
   }
 
+  .component__title--social-card {
+    font-size: var(--font-size-400);
+    padding-bottom: 0.5rem;
+    border-bottom: var(--border-thin);
+  }
+
   .component__text {
     /* font-size: 1.2rem; */
     /* font-weight: 300; */
     line-height: 1.7;
+  }
+
+  .component__text--social-card {
+    border-bottom: 2px dotted var(--color-text-decoration);
+    width: fit-content;
   }
 
   .component__text--card {
