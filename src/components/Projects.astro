@@ -12,6 +12,9 @@ import codImage from '../assets/cats-on-demand.png';
 import catsOnDemand from '../assets/cats-on-demand.webp';
 
 import projects from '../scripts/projects.js';
+for (let project of projects) {
+  console.log(project)
+}
 
 const images = [
   digitalCanvas,
@@ -51,6 +54,8 @@ const images = [
               headingLevel="h3"
               title={project.name}
               text={[project.description]}
+              link={project.apiLink}
+              linkText={project.linkText}
               variant="card"
             />
             <LinkButton

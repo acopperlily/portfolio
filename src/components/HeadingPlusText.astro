@@ -1,6 +1,20 @@
 ---
-const { headingLevel, title, text, variant } = Astro.props;
+import LinkButton from "./LinkButton.astro";
+const { headingLevel, title, text, linkText = null, link = null, variant } = Astro.props;
 const HeadingTag = headingLevel;
+
+function getIndex(text, link) {
+
+  const index = text.indexOf(link);
+  return index;
+}
+
+const indices = [];
+for (let sentence of text) {
+  indices.push(getIndex(sentence, linkText));
+}
+
+// console.log(headingLevel, title, text, 'linkText:', linkText, 'apiLink:', apiLink, variant);
 
 let titleClass = 'component__title';
 if (variant) titleClass += ` component__title--${variant}`;
@@ -10,7 +24,23 @@ if (variant) textClass += ` component__text--${variant}`;
 ---
 
 <HeadingTag class={titleClass}>{title}</HeadingTag>
-{text.map(para => <p class={textClass}>{para}</p>)}
+<!-- {text.map(para => <p class={textClass}>{para}</p>)} -->
+
+{text.map((para, i) => (
+  indices[i] === -1 
+    ) ? (
+      <p class={textClass}>{para}</p>
+    ) : (
+      <p class={textClass}>{para.slice(0, indices[i])}
+      <LinkButton 
+        link={link} 
+        page={linkText} 
+        title={linkText} 
+        isExternal={true} 
+        className="underline"
+      />
+      {para.slice(indices[i] + linkText?.length)}</p>
+    ))}
 
 <style>
 

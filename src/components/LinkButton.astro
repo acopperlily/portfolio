@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { link, page, icon, title, isExternal = false } = Astro.props;
+const { link, page, icon = null, title, isExternal = false, className='' } = Astro.props;
 
 const newWindow = {
   ...(isExternal && {
@@ -14,15 +14,15 @@ const newWindow = {
 <a 
   href={link}
   aria-label={`Navigate to ${page}`}
-  class={`link__wrapper${isExternal ? newWindow.class : ''} clickable`}
+  class={`${className && 'link__wrapper--' + className} link__wrapper${isExternal ? newWindow.class : ''} clickable`}
   {...newWindow}
 >
-  <Icon
+  {icon && <Icon
     name={icon} 
     aria-hidden="true"
     class={`link__icon${isExternal ? newWindow.class : ''}`}
-  />
-  <span class={`link__title${isExternal ? newWindow.class : ''}`}>{title}</span>
+  />}
+  <span class={`${className && 'link__title--' + className} link__title${isExternal ? newWindow.class : ''}`}>{title}</span>
 </a>
 
 <style>
@@ -40,6 +40,13 @@ const newWindow = {
     background-color: var(--color-frost);
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
+  }
+
+  .link__wrapper--underline {
+    display: inline;
+    padding: 0;
+    background-color: transparent;
+    border: none;
   }
 
   .link__icon {
@@ -64,6 +71,13 @@ const newWindow = {
 
   .link__title--card {
     font-size: var(--font-size-300);
+  }
+
+  .link__title--underline {
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: var(--font-weight-normal);
+    border-bottom: 2px dotted var(--color-text-decoration);
   }
 
   @media (min-width: 50em) {

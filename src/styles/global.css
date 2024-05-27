@@ -2,6 +2,7 @@
 
   /* OPACITY */
   --opacity-high: 0.9;
+  --opacity-medium-high: 0.7;
   --opacity-medium: 0.4;
   --opacity-low: 0.1;
 
@@ -22,7 +23,7 @@
   --color-darkest: hsl(var(--hue-primary), 100%, var(--lightness-dark));
 
   --color-frost: hsla(var(--hue-accent), 0%, 100%, var(--opacity-low));
-  --color-text-decoration: hsla(var(--hue-secondary), 5%, 50%, var(--opacity-medium));
+  --color-text-decoration: hsla(var(--hue-secondary), 5%, 50%, var(--opacity-medium-high));
 
 
   /* Borders */
