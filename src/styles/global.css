@@ -26,7 +26,7 @@
   --color-text-decoration: hsla(var(--hue-secondary), 5%, 50%, var(--opacity-medium-high));
 
 
-  /* Borders */
+  /* BORDERS */
   --border-thin: 2px solid var(--color-medium);
   --border-chonk: 3px solid var(--color-medium);
 
@@ -95,7 +95,8 @@
 
 
   /* STUFF */
-  --blur: 20px;
+  --blur-low: 10px;
+  --blur-high: 20px;
   --slope-height: 20rem;
   --slope-degree: 5deg;
   --slope-position: calc(var(--slope-height) / 2);

@@ -20,7 +20,7 @@ const newWindow = {
   {icon && <Icon
     name={icon} 
     aria-hidden="true"
-    class={`link__icon${isExternal ? newWindow.class : ''}`}
+    class={`${className && 'link__icon--' + className} link__icon${isExternal ? newWindow.class : ''}`}
   />}
   <span class={`${className && 'link__title--' + className} link__title${isExternal ? newWindow.class : ''}`}>{title}</span>
 </a>
@@ -38,8 +38,8 @@ const newWindow = {
     justify-content: center;
     gap: 0.75rem;
     background-color: var(--color-frost);
-    -webkit-backdrop-filter: blur(var(--blur));
-    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur-low));
+    backdrop-filter: blur(var(--blur-low));
   }
 
   .link__wrapper--underline {
@@ -78,6 +78,34 @@ const newWindow = {
     letter-spacing: normal;
     font-weight: var(--font-weight-normal);
     border-bottom: 2px dotted var(--color-text-decoration);
+  }
+
+  .link__wrapper--image__link {
+    border: none;
+    border-radius: 
+      var(--border-radius-sharp)
+      var(--border-radius-sharp)
+      none;
+    position: absolute;
+    inset: 0;
+
+    gap: 1rem;
+
+    background-color: hsla(var(--hue-primary), 100%, var(--lightness-dark), var(--opacity-medium));
+    backdrop-filter: blur(var(--blur-high));
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .link__wrapper--image__link:hover {
+    opacity: 1;
+  }
+
+  .link__icon--image__link,
+  .link__title--image__link {
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-wide);
   }
 
   @media (min-width: 50em) {

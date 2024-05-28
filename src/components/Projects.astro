@@ -47,6 +47,13 @@ const images = [
               alt={project.name}
               class="project-card__image"
             />
+            <LinkButton 
+              className="image__link"
+              link={project.pageLink}
+              icon="chevron-right"
+              title="Visit Site"
+              isExternal={true}
+            />
           </div>
 
           <div class="project-card__info-container">
@@ -101,6 +108,7 @@ const images = [
   }
 
   .project-card__image-container {
+    position: relative;
     border-radius: var(--border-radius-sharp) var(--border-radius-sharp) 0 0;
     width: 100%;
     aspect-ratio: 16 / 9;
