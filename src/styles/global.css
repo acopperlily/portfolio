@@ -249,10 +249,6 @@ a {
   text-decoration: none;
 }
 
-a:focus {
-  /* outline: 5px solid red; */
-}
-
 .btn {
   font-family: var(--font-stack-heading);
   border: none;

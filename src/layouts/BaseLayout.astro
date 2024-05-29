@@ -2,6 +2,14 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+const metadata = {
+  title: "Home",
+  site_name: "April Copley's Portfolio",
+  description: "Welcome to my awesome portfolio website.",
+  image: "https://github.com/acopperlily/portfolio/blob/main/public/favicon.svg",
+  image_alt: "a simple rocket icon"
+};
 ---
 
 <html lang="en">
@@ -10,7 +18,26 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+    <meta name="author" content="April Copley" />
+    <meta name="description" content="This is a presentation of programming projects showcasing the author's talents as a software engineer, including a brief bio and contact info." />
 		<title>April Copley | Software Engineer</title>
+
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:site_name" content={metadata.site_name} />
+    <meta property="og:description" content={metadata.description} />
+    <meta property="og:image" content={metadata.image} />
+    <meta property="og:image:alt" content={metadata.image_alt} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aprilcopley.netlify.app/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@acopperlily" />
+    <meta name="twitter:creator" content="@acopperlily" />
+    <meta name="twitter:title" content={metadata.site_name} />
+    <meta name="twitter:description" content={metadata.description} />
+    <meta name="twitter:image" content={metadata.image} />
+    <meta name="twitter:image:alt" content={metadata.image_alt} />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
