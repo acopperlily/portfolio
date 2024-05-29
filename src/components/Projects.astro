@@ -4,11 +4,8 @@ import { Image } from 'astro:assets';
 import HeadingPlusText from './HeadingPlusText.astro';
 import LinkButton from './LinkButton.astro';
 
-import dcImage from '../assets/digital-canvas.png';
 import digitalCanvas from '../assets/digital-canvas.webp';
-import hhcImage from '../assets/happy-hour-cocktails.png';
 import happyHourCocktails from '../assets/happy-hour-cocktails.webp';
-import codImage from '../assets/cats-on-demand.png';
 import catsOnDemand from '../assets/cats-on-demand.webp';
 
 import projects from '../scripts/projects.js';
@@ -31,7 +28,7 @@ const images = [
       <HeadingPlusText
         headingLevel="h2"
         title="Projects"
-        text={["The universe knows no limits, and neither should your imagination.", "From vanilla JavaScript to APIs, creativity and possibilities are boundless."]}
+        text={["The universe knows no limits, and neither should your imagination. From vanilla JavaScript to APIs, creativity and possibilities are boundless."]}
       />
 
     </div>
@@ -83,25 +80,19 @@ const images = [
 
   .projects {
     background-color: var(--color-medium-dark);
-    /* background-color: hsl(var(--hue-primary), 12%, 40%); */
-
     padding-top: 22rem;
     padding-bottom: 18rem;
   }
 
   .project-cards__container {
-    /* border: 1px solid yellow; */
     margin-top: 10rem;
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)); */
     gap: 8rem;
   }
 
   .project-card {
     background-color: var(--color-dark);
     border-radius: var(--border-radius-sharp);
-    /* border: 1px solid red; */
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,23 +115,12 @@ const images = [
 
   .project-card__info-container {
     flex: 1;
-    /* margin-top: 1rem; */
-    /* border: 1px dotted yellow; */
     height: fit-content;
     display: flex;
     flex-direction: column;
-    /* height: max-content; */
-    /* justify-content: center; */
     justify-content: space-between;
-    /* align-items: stretch; */
-    /* gap: 1rem; */
     padding: 1.5rem;
     padding: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
-  }
-
-  .project-card__info-container > * {
-    background-color: aqua;
-    border: 1px dotted greenyellow;
   }
 
   @media (min-width: 22em) {

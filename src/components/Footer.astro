@@ -84,10 +84,15 @@ const dateRange = '2022–2024';
   }
 
   .footer__link {
+    display: inline-block;
+    line-height: normal;
     font-weight: var(--font-weight-regular);
     letter-spacing: var(--letter-spacing-narrow);
     border-bottom: 2px dotted var(--color-text-decoration);
+  }
 
+  .footer__link:hover {
+    transform: scale(var(--transform-scale));
   }
 
   .footer__social-links {

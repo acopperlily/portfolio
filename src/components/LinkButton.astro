@@ -14,7 +14,7 @@ const newWindow = {
 <a 
   href={link}
   aria-label={`Navigate to ${page}`}
-  class={`${className && 'link__wrapper--' + className} link__wrapper${isExternal ? newWindow.class : ''} clickable`}
+  class={`${className && 'link__wrapper--' + className} link__wrapper${isExternal ? newWindow.class : ''} ${className === 'image__link' ? '' : 'clickable'}`}
   {...newWindow}
 >
   {icon && <Icon
@@ -29,7 +29,6 @@ const newWindow = {
 
   .link__wrapper,
   .link__wrapper--card {
-    /* margin-bottom: 2rem; */
     border: var(--border-thin);
     border-radius: var(--border-radius-soft);
     padding: 1.2rem;
@@ -74,10 +73,16 @@ const newWindow = {
   }
 
   .link__title--underline {
+    display: inline-block;
+    line-height: normal;
     text-transform: none;
     letter-spacing: normal;
     font-weight: var(--font-weight-normal);
     border-bottom: 2px dotted var(--color-text-decoration);
+  }
+
+  .link__title--underline:hover {
+    transform: scale(var(--transform-scale));
   }
 
   .link__wrapper--image__link {
@@ -92,9 +97,10 @@ const newWindow = {
     gap: 1rem;
 
     background-color: hsla(var(--hue-primary), 100%, var(--lightness-dark), var(--opacity-medium));
+    -webkit-backdrop-filter: blur(var(--blur-high));
     backdrop-filter: blur(var(--blur-high));
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
   }
 
   .link__wrapper--image__link:hover {
