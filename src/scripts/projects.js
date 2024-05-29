@@ -17,7 +17,7 @@ const projects = [
   },
   {
     name: "Cats On Demand",
-    description: "Cats may dominate the internet, but so can you! Demand your dose of fun provided by Cataas (Cat as a Service) API.",
+    description: "Cats may dominate the internet, but so can you! Demand your dose of feline fun provided by Cataas (Cat as a Service) API.",
     pageLink: "https://acopperlily.github.io/cats-on-demand/",
     codeLink: "https://github.com/acopperlily/cats-on-demand",
     apiLink: "https://cataas.com/#/",

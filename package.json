@@ -1,7 +1,28 @@
 {
-  "name": "portfolio",
+  "name": "april-copley-portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A presentation of programming projects showcasing the author's talents as a software engineer. Includes a brief bio and contact info.",
+  "keywords": [
+    "portfolio",
+    "personal website",
+    "web development",
+    "software engineer",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "API"
+  ],
+  "homepage": "https://aprilcopley.netlify.app/",
+  "author": {
+    "name": "April Copley",
+    "email": "april.copley@protonmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acopperlily/portfolio"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,7 +31,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.4.3",
+    "astro": "^4.9.2",
     "astro-icon": "^1.1.0"
   }
 }

@@ -14,8 +14,6 @@ for (let sentence of text) {
   indices.push(getIndex(sentence, linkText));
 }
 
-// console.log(headingLevel, title, text, 'linkText:', linkText, 'apiLink:', apiLink, variant);
-
 let titleClass = 'component__title';
 if (variant) titleClass += ` component__title--${variant}`;
 
@@ -24,7 +22,6 @@ if (variant) textClass += ` component__text--${variant}`;
 ---
 
 <HeadingTag class={titleClass}>{title}</HeadingTag>
-<!-- {text.map(para => <p class={textClass}>{para}</p>)} -->
 
 {text.map((para, i) => (
   indices[i] === -1 
