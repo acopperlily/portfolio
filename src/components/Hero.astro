@@ -5,23 +5,15 @@ import LinkButton from './LinkButton.astro';
 <section id="hero" class="hero section--bg-image">
   <div class="hero__container container">
 
-    <!-- <div class="hero__logo-container">
-      <Icon 
-        name="rocket" 
-        class="hero__logo" 
-        aria-hidden="true"
-      />
-    </div> -->
-
-    <p class="hero__greeting">Hello, World</p>
+    <p class="hero__greeting hero--animation">Hello, World</p>
 
     <h1 
-      class="hero__title"
+      class="hero__title hero--animation"
     >
       I'm <strong>April</strong>, and I'm a full-stack <em>software engineer</em>
     </h1>
 
-    <div class="hero__page-links">
+    <div class="hero__page-links hero--animation">
 
       <LinkButton
         link="#about"
@@ -49,34 +41,22 @@ import LinkButton from './LinkButton.astro';
   </div>
 </section>
 
+<script>
+  // Create sliding effect for hero elements
+  document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelectorAll('.hero--animation');
+    hero.forEach(el => el.classList.add('hero--loaded'));
+  });
+</script>
+
 <style>
   .hero {
     padding-top: 12rem;
     padding-bottom: 22rem;
   }
 
-  .hero__logo-container {
-    margin: 0 auto;
-    border: var(--border-thin);
-    border-radius: var(--border-radius-circle);
-    width: clamp(4rem, 3.8rem + 1vw, 5rem);
-    height: clamp(4rem, 3.8rem + 1vw, 5rem);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero__logo {
-    width: clamp(2rem, 1.8rem + 1vw, 3rem);
-    height: clamp(2rem, 1.8rem + 1vw, 3rem);
-  }
-
   .hero__greeting {
-    /* margin-top: 2rem; */
     padding-bottom: 0.5rem;
-    /* margin-bottom: 2rem; */
-    font-size: 4rem;
     font-size: var(--font-size-900);
     line-height: 1.2;
     border-bottom: var(--border-chonk);
@@ -85,13 +65,14 @@ import LinkButton from './LinkButton.astro';
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide);
     letter-spacing: 0.2em;
+    transform: translateX(-100%);
   }
 
   .hero__title {
     font-size: var(--font-size-700);
     font-weight: var(--font-weight-light);
     line-height: 1.4;
-    /* letter-spacing: normal; */
+    transform: translateX(100%);
   }
 
   .hero__title strong {
@@ -111,6 +92,15 @@ import LinkButton from './LinkButton.astro';
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    transform: translateY(100%);
+  }
+
+  .hero--animation {
+    transition: transform 1s ease-in-out;
+  }
+
+  .hero--loaded {
+    transform: translate(0);
   }
 
   @media (min-width: 50em) {
@@ -119,8 +109,6 @@ import LinkButton from './LinkButton.astro';
     }
 
     .hero__page-links {
-      /* display: flex; */
-      /* gap: 3rem; */
       flex-direction: row;
     }
   }
