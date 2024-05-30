@@ -4,6 +4,27 @@ import LinkButton from './LinkButton.astro';
 ---
 <section id="hero" class="hero section--bg-image">
   <div class="hero__container container">
+    <!-- <div class="icon-div">
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" viewBox="0 0 200 200">
+
+      
+        <polyline
+          points="50,20 150,100 50,180"
+          stroke="#f2e1d9"
+          stroke-width="20"
+          stroke-linecap="round"
+          fill="none"
+        />
+      
+        <path
+          d="M150,180 A10,10 0 0 1 150,20"
+          stroke="#f2e1d9"
+          stroke-width="20"
+          stroke-linecap="round"
+          fill="none"
+        />
+      </svg>
+    </div> -->
     <p class="hero__greeting hero--animation">Hello, World</p>
 
     <h1 
@@ -49,6 +70,11 @@ import LinkButton from './LinkButton.astro';
 </script>
 
 <style>
+
+  .icon-div {
+    background-color: var(--color-darkest);
+    padding: 15rem;
+  }
 
   .hero {
     padding-top: 12rem;
