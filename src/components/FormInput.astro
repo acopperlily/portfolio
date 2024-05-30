@@ -20,7 +20,7 @@ const attributes = {
     {name}
   </label>
 
-  {type === 'text' ? (
+  {(type === 'text' || type === 'email') ? (
     <input {...attributes} />
   ) : (
     <textarea {...attributes} ></textarea>

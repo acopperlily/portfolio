@@ -66,13 +66,21 @@ import LinkButton from './LinkButton.astro';
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide);
     letter-spacing: 0.2em;
+
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
   }
 
   .hero__title {
     font-size: var(--font-size-700);
     font-weight: var(--font-weight-light);
-    line-height: 1.4;
+    line-height: 1.5;
+
+    -webkit-transform: translate(100%, 0);
+    -moz-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
     transform: translate(100%, 0);
   }
 
@@ -93,6 +101,10 @@ import LinkButton from './LinkButton.astro';
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    -webkit-transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
 
@@ -101,6 +113,9 @@ import LinkButton from './LinkButton.astro';
   }
 
   .hero--loaded {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 
