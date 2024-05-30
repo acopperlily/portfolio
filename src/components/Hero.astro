@@ -43,7 +43,7 @@ import LinkButton from './LinkButton.astro';
 
 <script>
   // Create sliding effect for hero elements
-  document.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelectorAll('.hero--animation');
     hero.forEach(el => el.classList.add('hero--loaded'));
   });
