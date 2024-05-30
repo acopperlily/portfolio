@@ -43,7 +43,7 @@ import LinkButton from './LinkButton.astro';
 
 <script>
   // Create sliding effect for hero elements
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('load', () => {
     const hero = document.querySelectorAll('.hero--animation');
     hero.forEach(el => el.classList.add('hero--loaded'));
   });
@@ -66,14 +66,14 @@ import LinkButton from './LinkButton.astro';
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wide);
     letter-spacing: 0.2em;
-    transform: translateX(-100%);
+    transform: translate(-100%, 0);
   }
 
   .hero__title {
     font-size: var(--font-size-700);
     font-weight: var(--font-weight-light);
     line-height: 1.4;
-    transform: translateX(100%);
+    transform: translate(100%, 0);
   }
 
   .hero__title strong {
@@ -93,7 +93,7 @@ import LinkButton from './LinkButton.astro';
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    transform: translateY(100%);
+    transform: translate(0, 100%);
   }
 
   .hero--animation {
@@ -101,7 +101,7 @@ import LinkButton from './LinkButton.astro';
   }
 
   .hero--loaded {
-    transform: translate(0);
+    transform: translate(0, 0);
   }
 
   @media (min-width: 50em) {
