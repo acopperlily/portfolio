@@ -8,16 +8,16 @@
 
   <polyline
     points="50,20 150,100 50,180"
-    stroke="#cccccc"
-    stroke-width="15"
+    stroke="#f2e1d9"
+    stroke-width="20"
     stroke-linecap="round"
     fill="none"
   />
 
   <path
     d="M150,180 A10,10 0 0 1 150,20"
-    stroke="#cccccc"
-    stroke-width="15"
+    stroke="#f2e1d9"
+    stroke-width="20"
     stroke-linecap="round"
     fill="none"
   />
