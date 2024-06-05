@@ -37,12 +37,11 @@
 
   /* BACKGROUND */
   /* Mobile */
-  --bg-image-small: url('../assets/bg-portrait.jpg');
   --bg-image-portrait-fb: url('../assets/bg-portrait-414-fallback.jpg');
   --bg-image-portrait-sm: url('../assets/bg-portrait-414.webp');
   --bg-image-portrait-lg: url('../assets/bg-portrait-720.webp');
   --bg-image-portrait-xlg: url('../assets/bg-portrait-1440.webp');
-  --bg-image-portrait: url('../assets/bg-portrait.jpg');
+  --bg-image-portrait: url('../assets/bg-portrait-414-fallback.jpg');
 
   /* Desktop */
   --bg-image-landscape-fb: url('../assets/bg-landscape-1920-fallback.jpg');
