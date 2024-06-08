@@ -4,7 +4,7 @@ Welcome to my portfolio website where you can learn a little bit about me and wh
 
 **Link to live site:** https://aprilcopley.netlify.app/
 
-![Screenshot of header and hero section of portfolio website](https://raw.githubusercontent.com/acopperlily/portfolio/public/main-preview.webp)
+![Screenshot of header and hero section of portfolio website](https://raw.githubusercontent.com/acopperlily/portfolio/main/public/main-preview.webp)
 
 ## How It's Made
 
