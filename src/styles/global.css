@@ -185,7 +185,7 @@ section {
       var(--bg-image-portrait-xlg) 2x
     );
 
-  background-position: center;
+  background-position: top;
   /* background-size: cover; */
 
   /* Fallback background color */

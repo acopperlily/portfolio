@@ -1,69 +1,25 @@
-# Astro Starter Kit: Minimal
+# April Copley | Software Engineer
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Welcome to my portfolio website where you can learn a little bit about me and what I've been building. You will also find a contact form and my social media info where you can follow me or maybe even offer me a position on your team.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+**Link to live site:** https://aprilcopley.netlify.app/
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Screenshot of header and hero section of portfolio website](https://raw.githubusercontent.com/acopperlily/portfolio/public/main-preview.webp)
 
-## 🚀 Project Structure
+## How It's Made
 
-Inside of your Astro project, you'll see the following folders and files:
+**Tech used:**
+- ![astro](./src/icons/astro.svg) Astro
+- ![html](./src/icons/html.svg) HTML
+- ![css](./src/icons/css.svg) CSS
+- ![javascript](./src/icons/javascript.svg) JavaScript
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+This is my first project using the Astro framework. With Astro components and layouts, I created a responsive, accessible site with basic HTML, CSS, and a sprinkling of JavaScript.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Optimizations
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+I would like to further explore the Astro component concept in order to create more modular, reusable code. I would also like to expand the site by adding a blog feature and implementing page routes.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Lessons Learned
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-![astro](./src/icons/astro.svg)
-![bootstrap](./src/icons/bootstrap.svg)
-![c](./src/icons/cprog.svg)
-![cra](./src/icons/cra.svg)
-![css](./src/icons/css.svg)
-![express](./src/icons/express.svg)
-![git](./src/icons/git.svg)
-![html](./src/icons/html.svg)
-![javascript](./src/icons/javascript.svg)
-![markdown](./src/icons/markdown.svg)
-![mongodb](./src/icons/mongo.svg)
-![mongoose](./src/icons/mongoose.svg)
-![node](./src/icons/node.svg)
-![postgres](./src/icons/postgres.svg)
-![python](./src/icons/python.svg)
-![react](./src/icons/react.svg)
-![react-router](./src/icons/react-router.svg)
-![supabase](./src/icons/supabase.svg)
-![tailwind](./src/icons/tailwind.svg)
-![typescript](./src/icons/typescript.svg)
-![vite](./src/icons/vite.svg)
+While Astro components and React components share similarities, they also have their differences. My favorite feature of Astro is the ability to use scoped styling, keeping my CSS rulesets with the HTML to which they will be applied.
