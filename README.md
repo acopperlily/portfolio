@@ -1,10 +1,11 @@
 # April Copley | Software Engineer
 
-Welcome to my portfolio website where you can learn a little bit about me and what I've been building. You will also find a contact form and my social media info where you can follow me or maybe even offer me a position on your team.
+Welcome to my portfolio website where you can learn a little bit about me and the cool stuff I've been building. You will also find a contact form and my social media info where you can follow me or maybe even offer me a position on your team.
 
-**Link to live site:** https://aprilcopley.netlify.app/
+**Visit live site:** https://aprilcopley.netlify.app
 
 ![Screenshot of header and hero section of portfolio website](https://raw.githubusercontent.com/acopperlily/portfolio/main/public/main-preview.webp)
+
 
 ## How It's Made
 
@@ -16,9 +17,11 @@ Welcome to my portfolio website where you can learn a little bit about me and wh
 
 This is my first project using the Astro framework. With Astro components and layouts, I created a responsive, accessible site with basic HTML, CSS, and a sprinkling of JavaScript.
 
+
 ## Optimizations
 
 I would like to further explore the Astro component concept in order to create more modular, reusable code. I would also like to expand the site by adding a blog feature and implementing page routes.
+
 
 ## Lessons Learned
 

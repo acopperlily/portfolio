@@ -11,8 +11,8 @@ const socialInfo = [
   },
   {
     platform: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/april-copley/',
-    handle: 'linkedin.com/in/april-copley/'
+    url: 'https://www.linkedin.com/in/april-copley',
+    handle: 'linkedin.com/in/april-copley'
   }
 ];
 
