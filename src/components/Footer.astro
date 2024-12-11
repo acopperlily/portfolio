@@ -1,7 +1,7 @@
 ---
 import socialInfo from '../scripts/socialInfo';
 import SocialLink from './SocialLink.astro';
-const dateRange = '2022–2024';
+import getDateRange from '../scripts/getDateRange';
 ---
 
 <footer>
@@ -9,7 +9,7 @@ const dateRange = '2022–2024';
 
     <div class="footer__info-wrapper">
       <p class="footer__copy-info">
-        &copy; {dateRange}
+        &copy; {getDateRange(2022)}
         <a 
           href="#home"
           class="footer__link clickable"

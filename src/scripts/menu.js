@@ -1,6 +1,5 @@
 const debouncedAdjustMenu = debounce(adjustMenuOnResize, 10);
 
-
 document.addEventListener('DOMContentLoaded', () => {
   adjustMenuOnResize();
   const burger = document.querySelector('.btn--hamburger');
