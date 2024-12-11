@@ -5,6 +5,11 @@ const socialInfo = [
     handle: '@acopperlily'
   },
   {
+    platform: 'Bluesky',
+    url: 'https://bsky.app/profile/acopperlily.bsky.social',
+    handle: '@acopperlily.bsky.social'
+  },
+  {
     platform: 'GitHub',
     url: 'https://github.com/acopperlily',
     handle: 'github.com/acopperlily'
