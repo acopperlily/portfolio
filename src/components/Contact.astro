@@ -11,7 +11,7 @@ const inputFields = [
 ];
 
 const contactText = [
-  "Need a developer with a proven track record of creating and implementing successful full-stack web applications? Great news! I am looking to bring my skills to a company with a more extensive reach.",
+  "Though my roots are planted in the wetlands of Florida, my ambition reaches for the stars. I'm ready to bring my skills to an enthusiastic team of developers, committed and eager to discover solutions together.",
   "Please feel free to contact me directly by submitting the form below. Stay current on my latest adventures by following me on the socials."
 ];
 ---
@@ -64,9 +64,10 @@ const contactText = [
 <style>
   .formcontact__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
 
     row-gap: 10rem;
+    row-gap: clamp(2rem, 2rem + 1vw, 10rem);
     column-gap: clamp(1rem, 6.914vw + -0.21rem, 8rem);
     margin-top: 4rem;
     padding-bottom: 4rem;
@@ -74,7 +75,8 @@ const contactText = [
 
   .contact__container {
     padding-top: 28rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
+    padding-bottom: clamp(2rem, 2rem + 1vw, 4rem);
   }
 
   .form__wrapper,
