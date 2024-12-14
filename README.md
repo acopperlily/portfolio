@@ -29,8 +29,8 @@ While Astro components and React components share similarities, they also have t
 
 ## Other Projects
 
-**[Cats On Demand](https://acopperlily.github.io/cats-on-demand)**
-
 **[Digital Canvas](https://acopperlily.github.io/digital-canvas)**
 
 **[Happy Hour Cocktails](https://acopperlily.github.io/happy-hour-cocktails)**
+
+**[Catalyzer](https://catalyzer.netlify.app/)**
