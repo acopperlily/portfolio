@@ -30,6 +30,14 @@ const projects = [
     codeLink: "https://github.com/acopperlily/cats-on-demand",
     apiLink: "https://cataas.com/#/",
     linkText: "Cataas"
+  },
+  {
+    name: "April Copley",
+    description: "What self-respecting web developer wouldn't design and build their own portfolio website? The answer may surprise you.",
+    pageLink: "https://aprilcopley.netlify.app",
+    codeLink: "https://github.com/acopperlily/portfolio",
+    apiLink: null,
+    linkText: null
   }
 ];
 
