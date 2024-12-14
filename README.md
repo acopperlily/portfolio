@@ -2,7 +2,7 @@
 
 Welcome to my portfolio website where you can learn a little bit about me and the cool stuff I've been building. You will also find a contact form and my social media info where you can follow me or maybe even offer me a position on your team.
 
-**Visit live site:** https://aprilcopley.netlify.app
+**[Visit live site](https://aprilcopley.netlify.app)**
 
 ![Screenshot of header and hero section of portfolio website](https://raw.githubusercontent.com/acopperlily/portfolio/main/public/main-preview.webp)
 
@@ -26,3 +26,11 @@ I would like to further explore the Astro component concept in order to create m
 ## Lessons Learned
 
 While Astro components and React components share similarities, they also have their differences. My favorite feature of Astro is the ability to use scoped styling, keeping my CSS rulesets with the HTML to which they will be applied.
+
+## Other Projects
+
+**[Cats On Demand](https://acopperlily.github.io/cats-on-demand)**
+
+**[Digital Canvas](https://acopperlily.github.io/digital-canvas)**
+
+**[Happy Hour Cocktails](https://acopperlily.github.io/happy-hour-cocktails)**
