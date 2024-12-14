@@ -34,5 +34,3 @@ While Astro components and React components share similarities, they also have t
 **[Happy Hour Cocktails](https://acopperlily.github.io/happy-hour-cocktails)**
 
 **[Catalyzer](https://catalyzer.netlify.app/)**
-
-<a href="https://catalyzer.netlify.app/" target="_blank">**Catalyzer**</a>
