@@ -10,10 +10,10 @@ Welcome to my portfolio website where you can learn a little bit about me and th
 ## How It's Made
 
 **Tech used:**
-- <img src="./src/icons/astro.svg" width="24" />
-- <img src="./src/icons/html.svg" width="24" />
-- <img src="./src/icons/css.svg" width="24" />
-- <img src="./src/icons/javascript.svg" width="24" />
+- <img src="./src/icons/astro.svg" width="24" /> Astro
+- <img src="./src/icons/html.svg" width="24" /> HTML
+- <img src="./src/icons/css.svg" width="24" /> CSS
+- <img src="./src/icons/javascript.svg" width="24" /> JavaScript
 
 This is my first project using the Astro framework. With Astro components and layouts, I created a responsive, accessible site with basic HTML, CSS, and a sprinkling of JavaScript.
 
