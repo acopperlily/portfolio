@@ -4,16 +4,16 @@ Welcome to my portfolio website where you can learn a little bit about me and th
 
 **[Visit live site](https://aprilcopley.netlify.app)**
 
-![Screenshot of header and hero section of portfolio website](https://raw.githubusercontent.com/acopperlily/portfolio/main/public/main-preview.webp)
+<img src="./public/main-preview.webp" alt="Screenshot of header and hero section of portfolio website" />
 
 
 ## How It's Made
 
 **Tech used:**
-- ![astro](./src/icons/astro.svg) Astro
-- ![html](./src/icons/html.svg) HTML
-- ![css](./src/icons/css.svg) CSS
-- ![javascript](./src/icons/javascript.svg) JavaScript
+- <img src="./src/icons/astro.svg" width="24" />
+- <img src="./src/icons/html.svg" width="24" />
+- <img src="./src/icons/css.svg" width="24" />
+- <img src="./src/icons/javascript.svg" width="24" />
 
 This is my first project using the Astro framework. With Astro components and layouts, I created a responsive, accessible site with basic HTML, CSS, and a sprinkling of JavaScript.
 
