@@ -43,9 +43,13 @@ const imgSrc = src === 'discovery' ? discovery : headshot;
   }
 
   .component__image {
-    /* max-width: 100%; */
+    width: 100%;
     height: auto;
+    background-color: var(--color-lightest);
     border-radius: var(--border-radius-circle);
+  }
+
+  .component__text-wrapper {
   }
 
   .buttons-wrapper {
@@ -65,7 +69,6 @@ const imgSrc = src === 'discovery' ? discovery : headshot;
 
     .component__text-wrapper {
       text-align: right;
-      /* max-width: 40em; */
       order: -1;
     }
 
