@@ -68,7 +68,7 @@
   --font-size-300: clamp(0.8rem, 0.76rem + 0.213vw, 1rem);
   
   /* --font-size-400: clamp(1rem, 0.96rem + 0.213vw, 1.2rem); */
-  --font-size-400: clamp(0.9rem, 0.84rem + 0.3vw, 1.2rem);
+  --font-size-400: clamp(0.9rem, 0.84rem + 0.2vw, 1.1rem);
   /* --font-size-400: 1rem; */
   --font-size-500: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
   --font-size-600: clamp(1.1rem, 1.07rem + 0.16vw, 1.25rem);
